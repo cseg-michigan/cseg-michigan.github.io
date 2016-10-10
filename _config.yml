@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CSEG
-email: cseg-webmaster@umich.edu
+email: cseg-officers@umich.edu
 description: > # this means to ignore newlines until "baseurl:"
   CSEG is the Computer Science and Engineering Graduate student organization of
   the Computer Science and Engineering department at the University of Michigan
@@ -34,8 +34,9 @@ theme: minima
 
 owner: CSEG
 address:
-  - line:
-  - line:
+  - line: Bob and Betty Beyster Building
+  - line: 2260 Hayward St
+  - line: Ann Arbor, MI 48109
 telephone:
 copyright:
 
