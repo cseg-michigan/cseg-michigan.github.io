@@ -6,8 +6,23 @@ section: betty
 Chez Betty
 ==========
 
-Chez Betty is a co-op run by the graduate students in the CS department. It's located in the graduate student lounge and has snacks, drinks, and even near-meals in a pinch. Betty's built on the honor system, let us know what food you take and how much money you put in the box, and it'll automatically keep track of your account balance for you. Betty's always looking for volunteers, to get involved, shoot an email to chez-betty@umich.edu or check out `#chezbetty` on the [cseg slack](https://csegumich.slack.com).
+Chez Betty is a food co-op run by the graduate students in the CSE department.
+It's located in the graduate student lounge and has snacks, drinks, and easy-to-make meals.
+Betty's built on the honor system, so you pick what food you want, login on the terminal,
+and enter your purchase. You can also keep money in your account so you don't have to worry
+about making change.
 
-Other cool features of the lounge are a wall of whiteboard, great for groups, TV for relaxing, or a Bluetooth sound bar for while you're chillin.
+Betty's always looking for volunteers. To get involved, shoot an email to
+chez-betty@umich.edu or check out `#chezbetty` on the [cseg slack](https://csegumich.slack.com).
 
-To learn more about about Betty, go visit the grad lounge -- located on the second floor just off the landing from the straight stairs -- or take a digital tour at [chezbetty.eecs.umich.edu](https://chezbetty.eecs.umich.edu).
+Betty tries to keep its food as innexpensive as possible, while still covering all costs.
+Any money raised above covering costs is re-invested in CSEG to pay for social events.
+To balance this, Betty normally charges a fixed overhead above what the store's price is,
+so prices change as stores raise their prices or have a sale.
+
+Other cool features of the lounge are a wall of whiteboards, couches and tables for meeting with a group,
+and a TV and Bluetooth speakers.
+
+To learn more about about Betty, go visit the grad lounge -- located on the second floor
+just off the landing from the straight stairs -- or take a digital tour at
+[chezbetty.eecs.umich.edu](https://chezbetty.eecs.umich.edu).
