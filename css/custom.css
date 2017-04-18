@@ -2,3 +2,12 @@
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+.text-white {
+  color: #ffcb05;
+}
+
+.big {
+  font-size: 500%;
+  font-weight: bold;
+}
