@@ -3,4 +3,6 @@ layout: page
 section: liaison
 ---
 
-Sai is the faculty liaison. `#content`
+Sai Gouravajhala is the faculty liaison, and represents CSEG at faculty
+meetings.
+
