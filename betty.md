@@ -23,6 +23,9 @@ so prices change as stores raise their prices or have a sale.
 Other cool features of the lounge are a wall of whiteboards, couches and tables for meeting with a group,
 and a TV and Bluetooth speakers.
 
+Note: Betty is presently on sabbatical to reorganize itself as a sponsored corporation following UM policies. 
+Have no fear! Betty will be coming back better than ever!
+
 To learn more about about Betty, go visit the grad lounge -- located on the second floor
 just off the landing from the straight stairs -- or take a digital tour at
 [chezbetty.eecs.umich.edu](https://chezbetty.eecs.umich.edu).
