@@ -6,6 +6,8 @@ section: betty
 Chez Betty
 ==========
 
+*Update 2019:* Chez Betty is presently on sabbatical until further notice. As stated previously, Chez Betty is trying to reorganize itself as a sponsored corporation following UM policies. Chez Betty is not affiliated with CSEG.
+
 Chez Betty is a food co-op run by the graduate students in the CSE department.
 It's located in the graduate student lounge and has snacks, drinks, and easy-to-make meals.
 Betty's built on the honor system, so you pick what food you want, login on the terminal,
@@ -22,9 +24,6 @@ so prices change as stores raise their prices or have a sale.
 
 Other cool features of the lounge are a wall of whiteboards, couches and tables for meeting with a group,
 and a TV and Bluetooth speakers.
-
-Note: Betty is presently on sabbatical to reorganize itself as a sponsored corporation following UM policies. 
-Have no fear! Betty will be coming back better than ever!
 
 To learn more about about Betty, go visit the grad lounge -- located on the second floor
 just off the landing from the straight stairs -- or take a digital tour at
