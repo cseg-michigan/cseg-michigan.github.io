@@ -23,8 +23,8 @@ description: > # this means to ignore newlines until "baseurl:"
   cookouts, happy hours, and intramural sports. All CSE graduate students are
   automatically members of CSEG.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://um-cseg.github.io" # the base hostname & protocol for your site
-github_username: um-cseg
+url: "https://cseg-michigan.github.io" # the base hostname & protocol for your site
+github_username: cseg-michigan
 twitter_username:
 facebook_username:
 
