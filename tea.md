@@ -3,7 +3,7 @@ layout: page
 section: tea
 ---
 
-Tea times happen weekly, usually at 4:30pm on Wednesday. Tea time is a weekly
+Tea times happen weekly, usually at 4:00pm on Wednesday. Tea time is a weekly
 social hour, hosted by a different students or research groups each week, and features
 snacks and drinks. It's the favorite CSE way to socialize and get to know people!
 
