@@ -12,4 +12,5 @@ All graduate students are welcome to virtually attend. Come to hear a statement 
 
 The town hall will occur via Zoom. For information on how to sign into your University of Michigan Zoom account, [please follow the instructions here](https://its.umich.edu/communication/videoconferencing/zoom).
 
-Please use the following link to join the town hall: https://umich.zoom.us/j/168421739.
+Please use the following link to join the town hall: [https://umich.zoom.us/j/168421739](https://umich.zoom.us/j/168421739).
+
