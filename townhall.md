@@ -1,5 +1,5 @@
 ---
-layout: page_no_head
+layout: pagenohead
 section: townhall
 ---
 
