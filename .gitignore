@@ -3,3 +3,6 @@ _site
 .jekyll-metadata
 *.lock
 .DS_Store
+.bundle
+vendor
+.vscode
