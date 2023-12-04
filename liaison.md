@@ -2,6 +2,7 @@
 layout: page
 section: liaison
 ---
+CSEG represents graduate students at faculty meeetings, in admissions, and for faculty recruitment. In addition, the CSEG has been collaborating with the department on Explore Grad Studies in CSE Workshop, welcome week, and more.
 
 Madelyn Gatchel is the Recruitment Chair & Admission Committee Student Representative. This past semester she served as admissions committee representative, and contributed in (1) providing input from student perspective at weekly meetings; (2) reviewing several AI applications; and (3) working with GPO/CSEG/ECSEL leaders to plan and lead the in-person visitation week. 
 
