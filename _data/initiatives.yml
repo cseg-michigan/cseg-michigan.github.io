@@ -1,0 +1,51 @@
+
+
+# - id: mentorship
+#   title: Mentorship Program
+#   img: mentorship.jpg
+#   lead: Pairing grads across cohorts for support, skills, and community.
+#   description: >
+#     The Mentorship Program connects first-years with senior students for monthly check-ins,
+#     research advice, and social events.
+#   status: active
+#   tags: [community, student-success]
+#   owners:
+#     - { name: "CSEG Social Chair", email: "dannihu@umich.edu" }
+#   links:
+#     - { label: "Interest Form", url: "https://example.com/mentorship-interest" }
+
+
+- id: department-representation
+  title: Department Representation
+  img: 
+  lead: "Advocating for Graduate Students"
+  description: >
+    CSEG represents graduate students at faculty meetings, in admissions discussions,
+    and during faculty recruitment. We ensure graduate student perspectives are heard
+    and considered in departmental decisions.
+
+- id: program-initiatives
+  title: Masters' and PhD Program Initiatives
+  lead: "Academic and Community Support"
+  description: >
+    CSEG hosts initiatives for both Master's and PhD students designed to enrich the
+    graduate experience both professionally and socially. We support academic growth,
+    peer connection, and engagement across cohorts.
+
+- id: student-connections
+  title: Connect with Graduate Students
+  lead: "Collaboration and Communication"
+  img: cider_mill.jpg
+  description: >
+    CSEG helps you connect with current graduate students through research talks,
+    job postings, seminars, shared resources, and event announcements. We foster a
+    collaborative environment where students can learn from one another.
+
+- id: social-activities
+  title: Social Activities
+  lead: "Building Community Outside the Lab"
+  img: crawl.jpg
+  description: >
+    CSEG organizes a variety of social events such as cookouts, happy hours, intramural
+    sports, bike rides, and seasonal activities. These events help students relax, form
+    friendships, and build community within CSE.
