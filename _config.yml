@@ -2,7 +2,7 @@
 title: CSEG
 email: your-email@domain.com
 url: "https://cseg-michigan.github.io/"
-# baseurl: "/cseg-website-draft.github.io"
+baseurl: ""
 description: "CSEG is a student-run organization that represents CSE graduate students at the University of Michigan. We serve as a voice for graduate students on departmental
           committees and work to build a strong, inclusive community through social events, networking opportunities, and
           professional development activities. All CSE graduate students are automatically members of CSEG."
