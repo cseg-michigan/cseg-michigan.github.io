@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body id="page-top" class="initiatives">
+    {% include nav.html %}
+
+    <!-- Optional hero banner (uses page.hero_image if provided) -->
+    <header class="subhero{% if page.hero_image %} has-image{% endif %}" {% if page.hero_image %}style="background-image:url('{{ page.hero_image | relative_url }}')"{% endif %}>
+      <div class="overlay"></div>
+      <div class="container text-center">
+        <h1 class="subhero-title">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="subhero-subtitle">{{ page.subtitle }}</p>{% endif %}
+        {% if page.cta_href and page.cta_text %}
+          <p><a class="btn btn-outline" href="{{ page.cta_href | relative_url }}">{{ page.cta_text }}</a></p>
+        {% endif %}
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="page-section" role="main">
+      <div class="container">
+        {% if content %}
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              {{ content }}
+            </div>
+          </div>
+          <hr class="star-dark">
+        {% endif %}
+
+        <!-- Optional cards driven by front matter: page.initiatives (array) -->
+        {% if page.initiatives %}
+        <div class="row initiatives-grid">
+          {% for item in page.initiatives %}
+          <div class="col-sm-6 col-md-4">
+            <div class="initiative-card">
+              {% if item.icon %}
+                <div class="initiative-icon"><i class="fa {{ item.icon }}"></i></div>
+              {% endif %}
+              <h3 class="initiative-title">{{ item.title }}</h3>
+              {% if item.summary %}<p class="initiative-summary">{{ item.summary }}</p>{% endif %}
+              {% if item.link_href and item.link_text %}
+                <p><a class="btn btn-default" href="{{ item.link_href | relative_url }}">{{ item.link_text }}</a></p>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </main>
+
+    {% include footer.html %}
+    {% include js.html %}
+  </body>
+</html>

@@ -1,0 +1,161 @@
+---
+layout: default
+title: Initiatives
+permalink: /initiatives/
+---
+
+<section id="initiatives">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Initiatives</h2>
+        <hr class="star-primary">
+        <p class="lead">Programs and projects CSEG runs to support our grad community.</p>
+      </div>
+    </div>
+
+    <!-- Filters (optional) -->
+    <div class="row" style="margin-bottom:1rem;">
+      <div class="col-lg-12 text-center">
+        <div class="filters">
+          <button class="btn btn-default filter-btn" data-filter="all">All</button>
+          <button class="btn btn-default filter-btn" data-filter="community">Community</button>
+          <button class="btn btn-default filter-btn" data-filter="events">Events</button>
+          <button class="btn btn-default filter-btn" data-filter="student-success">Student Success</button>
+          <button class="btn btn-default filter-btn" data-filter="wellbeing">Wellbeing</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="portfolio-flex-grid">
+      <div class="portfolio-flex-row">
+        {% assign items = site.initiatives | sort: 'title' %}
+        {% for initiative in items %}
+        <div class="portfolio-flex-item portfolio-item text-center"
+             data-tags="{{ initiative.tags | join: ' ' | downcase }}">
+
+          <!-- Clickable card -> opens modal -->
+          <a href="#initiativeModal-{{ initiative.modal_id }}"
+             class="portfolio-link"
+             data-toggle="modal"
+             aria-label="{{ initiative.title }}">
+            <div class="caption" aria-hidden="true">
+              <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+
+            <!-- Square thumb -->
+            <div class="thumb-square">
+              <img
+                src="{{ '/img/initiatives/' | append: initiative.img | relative_url }}"
+                alt="{{ initiative.title }}"
+                class="img-responsive">
+            </div>
+          </a>
+
+          <!-- Title + meta -->
+          <h4 class="officer-name">{{ initiative.title }}</h4>
+          {% if initiative.lead %}
+            <p class="officer-role">{{ initiative.lead }}</p>
+          {% endif %}
+
+          {% if initiative.status %}
+            <span class="status-pill status-{{ initiative.status | downcase }}">
+              {{ initiative.status | capitalize }}
+            </span>
+          {% endif %}
+
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Initiative Modals -->
+{% for initiative in items %}
+<div class="portfolio-modal modal fade"
+     id="initiativeModal-{{ initiative.modal_id }}"
+     tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal" aria-label="Close">
+      <div class="lr"><div class="rl"></div></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <h2>{{ initiative.title }}</h2>
+            {% if initiative.lead %}
+              <p class="lead" style="margin-top:-10px;margin-bottom:15px;">{{ initiative.lead }}</p>
+            {% endif %}
+            <hr class="star-primary">
+
+            <img
+              src="{{ '/img/initiatives/' | append: initiative.img | relative_url }}"
+              class="img-responsive img-centered"
+              alt="{{ initiative.title }}">
+
+            {% if initiative.description %}
+              <p>{{ initiative.description }}</p>
+            {% endif %}
+
+            <ul class="list-inline item-details">
+              {% if initiative.tags %}
+                <li>Tags: <strong>{{ initiative.tags | join: ', ' }}</strong></li>
+              {% endif %}
+              {% if initiative.owners %}
+                <li>Contacts:
+                  <strong>
+                    {% for o in initiative.owners %}
+                      <a href="mailto:{{ o.email }}">{{ o.name }}</a>{% if forloop.last == false %}, {% endif %}
+                    {% endfor %}
+                  </strong>
+                </li>
+              {% endif %}
+            </ul>
+
+            {% if initiative.links %}
+              <div style="margin: 10px 0 20px;">
+                {% for l in initiative.links %}
+                  <a class="btn btn-primary" href="{{ l.url }}" target="_blank" rel="noopener">
+                    {{ l.label }}
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fa fa-times"></i> Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<!-- Tiny filter script -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var buttons = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.portfolio-flex-item');
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = this.getAttribute('data-filter');
+      buttons.forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+
+      cards.forEach(function(card){
+        if (f === 'all') { card.style.display = ''; return; }
+        var tags = (card.getAttribute('data-tags') || '').split(/\s+/);
+        card.style.display = tags.includes(f) ? '' : 'none';
+      });
+    });
+  });
+});
+</script>

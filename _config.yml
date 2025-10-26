@@ -1,44 +1,76 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: CSEG
-email: cseg-officers@umich.edu
-description: > # this means to ignore newlines until "baseurl:"
-  CSEG is the Computer Science and Engineering Graduate student organization of
-  the Computer Science and Engineering department at the University of Michigan
-  at Ann Arbor.  CSEG represents graduate students as representatives on a
-  number of departmental committees. CSEG organizes social activities like
-  cookouts, happy hours, and intramural sports. All CSE graduate students are
-  automatically members of CSEG.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cseg-michigan.github.io" # the base hostname & protocol for your site
-github_username: cseg-michigan
-twitter_username:
-facebook_username:
+email: your-email@domain.com
+url: "https://cseg-michigan.github.io/"
+# baseurl: "/cseg-website-draft.github.io"
+description: "CSEG is a student-run organization that represents CSE graduate students at the University of Michigan. We serve as a voice for graduate students on departmental
+          committees and work to build a strong, inclusive community through social events, networking opportunities, and
+          professional development activities. All CSE graduate students are automatically members of CSEG."
+keywords: "Computer, Science, Engineering, Graduate, Students, UMich, University, Michigan"
+skills: "Computer Science & Engineering Graduate Students @ UMich"
+meta_author: Hu Danniell
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Contact form:
+# - static : pass through formspree.io to validate email sending
+# - disqus : replace contact form by disqus thread
+# - comment the line below if you want to stick with the default PHP contact form
+contact: static
+
+# If you use disqus you need disqus shortname
+# https://help.disqus.com/customer/portal/articles/466208
+disqus_shortname: myshortname
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: FFCB05 #80B3FF
+  primary-rgb: 00274C #"128,179,255"
+  secondary: 00274C #FD6E8A
+  secondary-dark: 233140 #A2122F
+
+
+# # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# social:
+#   - title: twitter
+#     url: http://twitter.com/jekyllrb
+#   - title: facebook
+#     url:
+#   - title: stack-overflow
+#     url: http://stackoverflow.com/questions/tagged/jekyll
+#   - title: bitbucket
+#     url: http://bitbucket.org/jekyll
+#   - title: github
+#     url: http://github.com/jekyll
+
+# # Postal address (add as many lines as necessary)
+# address:
+#   - line: 3481 Melrose Place
+#   - line: Beverly Hills, CA 90210
+
+# # Credits content
+# credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
 
 # Build settings
 markdown: kramdown
-theme: minima
+permalink: pretty
 
-owner: CSEG
-address:
-  - line: Bob and Betty Beyster Building
-  - line: 2260 Hayward St
-  - line: Ann Arbor, MI 48109
-telephone:
-copyright:
+#for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: ""
 
-# API settings
-google_api_key:
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:name/
+  initiatives:
+    output: true        # gives each initiative its own page (optional)
+    permalink: /initiatives/:name/

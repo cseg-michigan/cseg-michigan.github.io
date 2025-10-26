@@ -1,0 +1,131 @@
+---
+layout: default
+title: Initiatives
+permalink: /initiatives/
+---
+
+{%- comment -%}
+Guard against missing/invalid data:
+- Try to load _data/initiatives.yml
+- Fallback to an empty array so sort/loops don’t crash
+{%- endcomment -%}
+{% assign items = site.data.initiatives | default: site.data['initiatives'] | default: [] %}
+{% unless items == empty %}
+  {% assign items = items | sort: 'title' %}
+{% endunless %}
+
+<section id="initiatives">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Initiatives</h2>
+        <hr class="star-primary">
+        <p class="lead">Programs and projects CSEG runs to support our grad community.</p>
+      </div>
+    </div>
+
+    {% if items == empty %}
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <p><em>No initiatives found.</em></p>
+          <p style="font-size:14px;color:#6b7280;">
+            Looking for <code>_data/initiatives.yml</code>. Make sure it exists, is valid YAML,
+            and contains a list (each item starting with <code>-</code>).
+          </p>
+        </div>
+      </div>
+    {% else %}
+
+      {% for it in items %}
+      <article id="initiative-{{ it.id | default: it.title | slugify }}" class="initiative-block">
+        <div class="row">
+
+          <!-- Image -->
+          <div class="col-sm-5">
+            <div class="thumb-rect">
+              <img
+                src="{{ '/img/initiatives/' | append: it.img | relative_url }}"
+                alt="{{ it.title }}"
+                class="img-responsive">
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="col-sm-7">
+            <header class="initiative-header">
+              <h3 class="initiative-title">{{ it.title }}</h3>
+              {% if it.status %}
+                <span class="status-pill status-{{ it.status | downcase }}">{{ it.status | capitalize }}</span>
+              {% endif %}
+            </header>
+
+            {% if it.lead %}
+              <p class="text-muted" style="margin-top:-6px;">{{ it.lead }}</p>
+            {% endif %}
+
+            {% if it.description %}
+              <div class="initiative-description">
+                {{ it.description | markdownify }}
+              </div>
+            {% endif %}
+
+            <ul class="list-inline" style="margin-top:10px;">
+              {% if it.tags %}
+                <li>
+                  <strong>Tags:</strong>
+                  {% for tag in it.tags %}
+                    <span class="tag-chip">{{ tag }}</span>
+                  {% endfor %}
+                </li>
+              {% endif %}
+
+              {% if it.owners %}
+                <li>
+                  <strong>Contacts:</strong>
+                  {% for o in it.owners %}
+                    <a href="mailto:{% if o.email %}{{ o.email }}{% endif %}">{{ o.name }}</a>{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                </li>
+              {% endif %}
+            </ul>
+
+            {% if it.links %}
+              <div class="initiative-links" style="margin-top:8px;">
+                {% for l in it.links %}
+                  <a class="btn btn-primary btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      <hr class="initiative-divider">
+      {% endfor %}
+
+    {% endif %}
+
+  </div>
+</section>
+
+<style>
+  .initiative-block { margin: 25px 0; }
+  .initiative-header { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .initiative-title { margin: 0; }
+  .initiative-divider { margin: 28px 0; }
+
+  .thumb-rect { width:100%; aspect-ratio:4/3; overflow:hidden; border-radius:8px; background:#f7f7f7; }
+  .thumb-rect > img { width:100%; height:100%; object-fit:cover; display:block; }
+  @supports not (aspect-ratio: 4 / 3) {
+    .thumb-rect { position:relative; }
+    .thumb-rect::before { content:""; display:block; padding-top:75%; }
+    .thumb-rect > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  }
+
+  .status-pill { display:inline-block; padding:2px 10px; font-size:12px; border-radius:999px; border:1px solid rgba(0,0,0,0.08); }
+  .status-active   { background:#e6fff0; }
+  .status-ongoing  { background:#eaf3ff; }
+  .status-paused   { background:#fff7e6; }
+  .status-archived { background:#f3f4f6; color:#555; }
+  .tag-chip { display:inline-block; padding:2px 8px; font-size:11px; border-radius:999px; background:#f1f5f9; margin-left:4px; }
+</style>
