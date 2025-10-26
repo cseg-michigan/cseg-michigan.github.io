@@ -1,15 +1,15 @@
-
 <!DOCTYPE html>
-<html>
-{% include head.html %}
+<html lang="en">
+  {% include head.html %}
+  <body id="page-top" class="index">
+    {% include nav.html %}
 
-<body id="page-top" class="index">
-  {% include nav.html %}
+    <main role="main">
+      {% include initiatives.html %}   <!-- pulls in the actual page content -->
+      {{ content }}                    <!-- optional: allows page-specific extras -->
+    </main>
 
-
-  {% include initiatives.html %}
-
-
-</body>
-
+    {% include footer.html %}
+    {% include js.html %}
+  </body>
 </html>
