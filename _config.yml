@@ -74,3 +74,8 @@ collections:
   initiatives:
     output: true        # gives each initiative its own page (optional)
     permalink: /initiatives/:name/
+
+
+gcal:
+  calendar_id: "umich.edu_r777r5udn3p7h91vg3n88hkl0k@group.calendar.google.com"
+  api_key: "YOUR_PUBLIC_BROWSER_API_KEY"

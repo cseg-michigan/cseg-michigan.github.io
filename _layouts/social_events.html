@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body id="page-top" class="index">
+    {% include nav.html %}
+
+    <main role="main" id="social-events">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>{{ page.title }}</h2>
+            <hr class="star-primary">
+            {% if page.lead %}
+              <p class="lead" style="margin-top:16px;">{{ page.lead }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Calendar Card -->
+        <div class="row" style="margin-bottom: 30px;">
+          <div class="col-lg-10 col-lg-offset-1">
+            <div class="calendar-card">
+              <iframe
+                class="cseg-calendar"
+                title="CSEG Social Events Calendar"
+                src="https://calendar.google.com/calendar/embed?src=umich.edu_r777r5udn3p7h91vg3n88hkl0k%40group.calendar.google.com&ctz=America%2FNew_York&showTitle=0&showPrint=0&mode=MONTH&showTabs=1&showNav=1&showCalendars=0"
+                frameborder="0"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional Page Content -->
+        {% if content and content != "" %}
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1">
+            {{ content }}
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </main>
+
+    {% include footer.html %}
+    {% include js.html %}
+
+    <style>
+      .calendar-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+        padding: 12px;
+      }
+
+      .cseg-calendar {
+        width: 100%;
+        height: 750px;
+        border: 0;
+      }
+
+      #social-events .lead {
+        color: #333;
+      }
+    </style>
+  </body>
+</html>
