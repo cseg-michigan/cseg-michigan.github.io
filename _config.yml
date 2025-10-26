@@ -1,6 +1,6 @@
 # Site settings
 title: CSEG
-email: your-email@domain.com
+email: cseg-officers@umich.edu
 url: "https://cseg-michigan.github.io/"
 baseurl: ""
 description: "CSEG is a student-run organization that represents CSE graduate students at the University of Michigan. We serve as a voice for graduate students on departmental
@@ -75,7 +75,3 @@ collections:
     output: true        # gives each initiative its own page (optional)
     permalink: /initiatives/:name/
 
-
-gcal:
-  calendar_id: "umich.edu_r777r5udn3p7h91vg3n88hkl0k@group.calendar.google.com"
-  api_key: "YOUR_PUBLIC_BROWSER_API_KEY"

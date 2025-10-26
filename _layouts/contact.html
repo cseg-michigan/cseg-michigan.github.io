@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body id="page-top" class="index">
+    {% include nav.html %}
+
+    <main role="main" id="contact-page">
+      {% include contact.html %}   <!-- pulls in the actual contact section -->
+      {{ content }}                <!-- optional: page-specific extras -->
+    </main>
+
+    {% include footer.html %}
+    {% include js.html %}
+
+    <style>
+      #contact-page {
+        padding-top: 80px;   /* space below fixed navbar */
+        padding-bottom: 60px;
+      }
+    </style>
+  </body>
+</html>
