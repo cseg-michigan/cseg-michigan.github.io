@@ -14,10 +14,20 @@
 #   links:
 #     - { label: "Interest Form", url: "https://example.com/mentorship-interest" }
 
+- id: tea-time
+  title: Tea Time
+  # TODO replace
+  img: tea-placeholder.jpg
+  lead: "Fostering Departmental Connection"
+  description: >
+     CSEG hosts tea time, a (mostly) weekly gathering where graduate students, faculty,
+       and staff come together over snacks and drinks. Hosted in the grad lounge,
+       it is a casual space to take a break and meet people outside of your lab.
 
 - id: department-representation
   title: Department Representation
-  img: 
+  # TODO replace
+  img: leinweber.jpg
   lead: "Advocating for Graduate Students"
   description: >
     CSEG represents graduate students at faculty meetings, in admissions discussions,
@@ -27,6 +37,8 @@
 - id: program-initiatives
   title: Masters' and PhD Program Initiatives
   lead: "Academic and Community Support"
+  # TODO replace
+  img: bbb.jpg
   description: >
     CSEG hosts initiatives for both Master's and PhD students designed to enrich the
     graduate experience both professionally and socially. We support academic growth,
