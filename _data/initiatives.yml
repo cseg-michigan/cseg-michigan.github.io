@@ -53,6 +53,11 @@
     job postings, seminars, shared resources, and event announcements. We foster a
     collaborative environment where students can learn from one another.
 
+  links:
+    - label: "Join the CSEG Slack Community"
+      url: "https://join.slack.com/t/csegumich/shared_invite/zt-3h6yxaq2p-QElGMgeHyEUviHZRCqkcXw"   
+    
+
 - id: social-activities
   title: Social Activities
   lead: "Building Community Outside the Lab"
