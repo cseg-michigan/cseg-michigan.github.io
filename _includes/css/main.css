@@ -171,6 +171,28 @@ header .intro-text .skills {
     border: 0;
 }
 
+.navbar .navbar-nav > li > a {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.navbar .navbar-nav > li > a:hover {
+    border-bottom-color: #FFCB05;
+    color: #FFCB05 !important;
+    background: transparent !important;
+}
+
+.navbar .navbar-nav > li.active > a,
+.navbar .navbar-nav > li.active > a:hover,
+.navbar .navbar-nav > li.active > a:focus {
+    border-bottom-color: #FFCB05;
+    color: #FFCB05 !important;
+    background: transparent !important;
+}
+
 section {
     padding: 100px 0;
 }
@@ -489,7 +511,7 @@ footer .footer-below {
 }
 
 .navbar-nav>.active>a {
-    background-color: #{{ site.color.secondary-dark }} !important;
+    background-color: transparent !important;
 }
 
 /* Fix modal mouse wheel issues */

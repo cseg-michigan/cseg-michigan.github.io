@@ -23,10 +23,10 @@
         </li>
 
         <!-- Separate pages -->
-        <li><a href="{{ '/initiatives/'   | relative_url }}">Initiatives</a></li>
-        <li><a href="{{ '/life-at-cseg/' | relative_url }}">Life at CSEG</a></li>
-        <li><a href="{{ '/calendar/' | relative_url }}">Calendar</a></li>
-        <li><a href="{{ '/contact/'       | relative_url }}">Contact</a></li>
+        <li{% if page.url contains '/initiatives' %} class="active"{% endif %}><a href="{{ '/initiatives/' | relative_url }}">Initiatives</a></li>
+        <li{% if page.url contains '/life-at-cseg' %} class="active"{% endif %}><a href="{{ '/life-at-cseg/' | relative_url }}">Life in CSEG</a></li>
+        <li{% if page.url contains '/calendar' %} class="active"{% endif %}><a href="{{ '/calendar/' | relative_url }}">Calendar</a></li>
+        <li{% if page.url contains '/contact' %} class="active"{% endif %}><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
       </ul>
     </div>
   </div>
