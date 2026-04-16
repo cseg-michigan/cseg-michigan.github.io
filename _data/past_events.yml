@@ -1,0 +1,30 @@
+- title: End-of-Year Bowling Event
+  date: Winter 2026
+  id: bowling
+  credit: "Photos: Danniell Hu"
+  photos:
+    - img/past_events/bowling/bowling.JPG
+    - img/past_events/bowling/IMG_9658.JPG
+    - img/past_events/bowling/IMG_9677.JPG
+    - img/past_events/bowling/IMG_9838.JPG
+    - img/past_events/bowling/IMG_9846.JPG
+    - img/past_events/bowling/IMG_9851.JPG
+    - img/past_events/bowling/IMG_9765.JPG
+    - img/past_events/bowling/IMG_9813.JPG
+    - img/past_events/bowling/IMG_9828.JPG
+
+- title: Ice Skating Outing
+  date: Fall 2024
+  id: skating
+  credit: "Photos: Steve Crang"
+  article: "https://cse.engin.umich.edu/stories/cse-grad-students-celebrate-the-turn-of-season-with-ice-skating-outing"
+  photos:
+    - img/past_events/ice_skating/1_skating-lead-short.jpg
+    - img/past_events/ice_skating/DSC_6262-1024x683.jpg
+    - img/past_events/ice_skating/DSC_6267-1024x683.jpg
+    - img/past_events/ice_skating/DSC_6271-1024x683.jpg
+    - img/past_events/ice_skating/DSC_6276-1024x683.jpg
+    - img/past_events/ice_skating/DSC_6284-1024x683.jpg
+    - img/past_events/ice_skating/DSC_6290-1024x683.jpg
+    - img/past_events/ice_skating/DSC_6297-1024x683.jpg
+    - img/past_events/ice_skating/DSC_6322-1024x683.jpg
