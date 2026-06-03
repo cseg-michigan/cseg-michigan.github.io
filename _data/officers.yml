@@ -1,0 +1,83 @@
+# Officers for the current academic year.
+# To add an officer: copy an entry block, fill in the fields, and add their photo to img/portfolio/.
+# To remove an officer: delete their entry block.
+# Fields:
+#   name:        Full name (displayed under photo and in modal)
+#   role:        Position title
+#   img:         Filename in img/portfolio/ (e.g. diana.jpg)
+#   description: Optional bio shown in the modal popup (leave blank for none)
+
+- name: Diana Gomez
+  role: PhD Student President
+  img: diana.jpg
+  description:
+
+- name: Namita Shah
+  role: Master Student President
+  img: namita.png
+  description:
+
+- name: Alexander Knapen
+  role: Secretary
+  img: alexander.jpg
+  description:
+
+- name: Rayhan Rashed
+  role: Treasurer
+  img: rayrash.jpg
+  description:
+
+- name: Meron Zerihun Demissie
+  role: Service Co-Chair
+  img: meron.jpg
+  description:
+
+- name: Serra Dane
+  role: Service Co-Chair
+  img: serra.png
+  description:
+
+- name: Danniell Hu
+  role: PhD Social Chair
+  img: danni.png
+  description:
+
+- name: Vrinda Desai
+  role: MS Social Chair
+  img: vrindad.png
+  description:
+
+- name: Alvaro Vega Hidalgo
+  role: Community Engagement Chair
+  img: alvaro.jpg
+  description:
+
+- name: Steven Schaefer
+  role: University Relations Chair
+  img: steven.jpeg
+  description:
+
+- name: Austin Nguyen
+  role: Graduate Student Recruitment Chair
+  img: austin.jpg
+  description:
+
+- name: Haotian (Jack) Gong
+  role: Admissions and Recruitment Liaison
+  img: haotian.jpg
+  description:
+
+- name: Aneesha Sampath
+  role: Admissions Committee Student Representative
+  img: aneesha.jpg
+  description:
+
+- name: Jonah Rosenblum
+  role: Faculty Hiring Committee Student Representative
+  img: jonahrosenblum_headshot.png
+  description:
+
+- name: Mosharaf Chowdhury
+  role: Faculty Advisor
+  img: mc.jpeg
+  description:

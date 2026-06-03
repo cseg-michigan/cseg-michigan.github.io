@@ -1,0 +1,20 @@
+# Community highlights shown in the carousel on the home page.
+# To add a highlight: copy an entry block below and fill in the fields.
+# To remove a highlight: delete its entry block.
+# Photos go in img/highlights/.
+# Fields:
+#   img:     Filename in img/highlights/ (e.g. t_shirt.jpg)
+#   alt:     Alt text for the image
+#   season:  Label shown in the badge (e.g. "Winter 2026")
+#   caption: Main caption text shown below the image
+#   credit:  Photographer name (optional — leave blank to hide)
+
+- img: t_shirt.jpg
+  alt: T-Shirt Contest Winners
+  season: Winter 2026
+  caption: >
+    Members of the theory lab show off this year's winning T-shirt design.
+    This was CSEG's first year holding a community-wide design contest —
+    the winning design was selected from submissions across the department.
+    Congratulations to the winning designer, and thank you to everyone who participated!
+  credit: Nikhil Shagrithaya

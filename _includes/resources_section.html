@@ -1,0 +1,44 @@
+<!-- Resources Page Content -->
+<!-- Links live in _data/resources.yml — edit that file to add, remove, or reorder links. -->
+
+<section id="resources">
+  <div class="container">
+
+    <div class="row resources-header-row">
+      <div class="col-lg-12 text-center">
+        <h2>Resources</h2>
+        <hr class="star-primary">
+        <p class="resources-lead">
+          Useful links for CSE graduate students — from advising and funding to professional development.
+        </p>
+      </div>
+    </div>
+
+    <div class="row resources-grid">
+      {% for group in site.data.resources %}
+      <div class="col-md-6 resource-group-col">
+        <div class="resource-group">
+          <h3 class="resource-group-title">
+            <i class="fa fa-{{ group.icon }} resource-group-icon"></i>
+            {{ group.category }}
+          </h3>
+          <ul class="resource-list">
+            {% for link in group.links %}
+            <li class="resource-item">
+              <a href="{{ link.url }}" target="_blank" rel="noopener" class="resource-link">
+                {{ link.label }}
+                <i class="fa fa-external-link resource-external-icon"></i>
+              </a>
+              {% if link.note %}
+              <p class="resource-note">{{ link.note }}</p>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

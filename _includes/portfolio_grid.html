@@ -1,4 +1,7 @@
-<!-- Portfolio Grid Section -->
+<!-- Officers Grid -->
+<!-- Officer data lives in _data/officers.yml — edit that file to add, remove, or update officers. -->
+<!-- Officer photos go in img/portfolio/. -->
+
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
     <div class="row">
@@ -9,25 +12,24 @@
     </div>
 
     <div class="portfolio-flex-row">
-      {% for post in site.portfolio %}
+      {% for officer in site.data.officers %}
+      {% assign officer_id = forloop.index %}
       <div class="portfolio-flex-item portfolio-item text-center">
 
-        <!-- Clickable image opens modal -->
-        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal" aria-label="{{ post.title }}">
+        <a href="#officerModal-{{ officer_id }}" class="portfolio-link" data-toggle="modal" aria-label="{{ officer.name }}">
           <div class="caption" aria-hidden="true">
             <div class="caption-content">
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="{{ '/img/portfolio/' | append: post.img | relative_url }}"
+          <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
                class="img-responsive"
-               alt="{{ post.alt | default: post.title }}">
+               alt="{{ officer.name }}">
         </a>
 
-        <!-- Name + Role under image -->
-        <h4 class="officer-name">{{ post.title }}</h4>
-        {% if post.role or post.category %}
-        <p class="officer-role">{{ post.role | default: post.category }}</p>
+        <h4 class="officer-name">{{ officer.name }}</h4>
+        {% if officer.role %}
+        <p class="officer-role">{{ officer.role }}</p>
         {% endif %}
 
       </div>
@@ -36,10 +38,10 @@
   </div>
 </section>
 
-<!-- Portfolio Modals -->
-{% for post in site.portfolio %}
-<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
-     aria-hidden="true">
+<!-- Officer Modals -->
+{% for officer in site.data.officers %}
+{% assign officer_id = forloop.index %}
+<div class="portfolio-modal modal fade" id="officerModal-{{ officer_id }}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr"><div class="rl"></div></div>
@@ -48,21 +50,16 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
-            <h2>{{ post.title }}</h2>
-            {% if post.role %}
-            <p class="lead" style="margin-top:-10px;margin-bottom:15px;">{{ post.role }}</p>
+            <h2>{{ officer.name }}</h2>
+            {% if officer.role %}
+            <p class="lead" style="margin-top:-10px;margin-bottom:15px;">{{ officer.role }}</p>
             {% endif %}
             <hr class="star-primary">
-            <img src="{{ '/img/portfolio/' | append: post.img | relative_url }}"
-                 class="img-responsive img-centered" alt="{{ post.alt | default: post.title }}">
-            {% if post.description %}
-            <p>{{ post.description }}</p>
+            <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
+                 class="img-responsive img-centered" alt="{{ officer.name }}">
+            {% if officer.description %}
+            <p>{{ officer.description }}</p>
             {% endif %}
-            <ul class="list-inline item-details">
-              {% if post.category %}
-              <li>Category: <strong>{{ post.category }}</strong></li>
-              {% endif %}
-            </ul>
             <button type="button" class="btn btn-default" data-dismiss="modal">
               <i class="fa fa-times"></i> Close
             </button>

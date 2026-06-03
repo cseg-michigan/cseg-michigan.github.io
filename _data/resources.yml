@@ -1,0 +1,75 @@
+# Resources page content.
+# To add a link: add an entry under the relevant category's `links` list.
+# To add a new category: copy a category block and fill in the fields.
+# Fields:
+#   category:  Section heading
+#   icon:      Font Awesome icon name (without "fa-"), e.g. "graduation-cap"
+#   links:
+#     - label: Display text
+#       url:   Full URL
+#       note:  Optional short description shown under the label
+
+- category: New Students
+  icon: star
+  links:
+    - label: New Student Information
+      url: https://cse.engin.umich.edu/academics/graduate/graduate-advising/new-student-information/
+      note: Orientation, onboarding, and getting started at CSE.
+    - label: Grad Student Resources (Google Doc)
+      url: https://docs.google.com/document/d/1MjeunDj4aoa4P2mIr0tsraE67GDfY3cVj-0RWQZMIVI/edit?usp=sharing
+      note: Compiled resource guide maintained by the department.
+    - label: Admissions FAQs
+      url: https://cse.engin.umich.edu/academics/graduate/admissions/faqs/
+      note: Answers to common questions about the program.
+
+- category: Advising & Support
+  icon: users
+  links:
+    - label: Graduate Advising
+      url: https://cse.engin.umich.edu/academics/graduate/graduate-advising/
+      note: Find your academic advisor and get guidance on degree requirements.
+    - label: Drop-in Advising
+      url: https://cse.engin.umich.edu/academics/graduate/graduate-advising/drop-in-advising/
+      note: Walk-in hours for quick questions — no appointment needed.
+    - label: Forms and Processes
+      url: https://cse.engin.umich.edu/academics/graduate/graduate-advising/forms-and-processes/
+      note: Degree milestone forms, plan of work, and official processes.
+    - label: PhD Student FAQs
+      url: https://cse.engin.umich.edu/academics/graduate/current-phd-students/faqs-for-current-phd-students/
+      note: Common questions for current PhD students.
+    - label: Master's Student Information
+      url: https://cse.engin.umich.edu/academics/graduate/current-masters-students/
+      note: Degree requirements, milestones, and resources for MS students.
+
+- category: Funding & Fellowships
+  icon: book
+  links:
+    - label: Funding Information
+      url: https://cse.engin.umich.edu/academics/graduate/admissions/funding/
+      note: Overview of funding options including GSI/GSRA appointments.
+    - label: External Fellowships
+      url: https://cse.engin.umich.edu/academics/graduate/admissions/external-fellowships/
+      note: NSF, NDSEG, Hertz, and other fellowship opportunities.
+
+- category: Professional Development
+  icon: briefcase
+  links:
+    - label: Professional Coaching
+      url: https://cse.engin.umich.edu/academics/graduate/group-and-individual-coaching/
+      note: Free group and individual coaching sessions for grad students.
+    - label: Internship Guidelines
+      url: https://cse.engin.umich.edu/academics/graduate/internship-guidelines/
+      note: Department policies and guidance for internships.
+    - label: Hear from Our Students
+      url: https://cse.engin.umich.edu/academics/graduate/hear-from-our-students/
+      note: Student perspectives on the CSE graduate experience.
+
+- category: Program Information
+  icon: graduation-cap
+  links:
+    - label: PhD in CSE
+      url: https://cse.engin.umich.edu/academics/graduate/graduate-programs/phd-in-cse/
+    - label: Master's in CSE
+      url: https://cse.engin.umich.edu/academics/graduate/graduate-programs/masters-in-cse/
+    - label: Master's in Data Science
+      url: https://cse.engin.umich.edu/academics/graduate/graduate-programs/masters-in-data-science/
