@@ -595,7 +595,7 @@ footer .footer-below {
 }
 
 #about hr.star-light {
-  margin: 10px auto 20px;
+  margin: 32px auto 24px;
 }
 
 #about hr.star-light:after {
@@ -625,7 +625,12 @@ footer .footer-below {
 
 /* extra breathing room between name and title inside modals */
 .portfolio-modal .modal-content h2 {
-  margin-bottom: 12px;     /* add space below the name */
+  margin-bottom: 12px;
+}
+
+.officer-modal-role {
+  margin-top: -10px;
+  margin-bottom: 15px;
 }
 
 .portfolio-modal .modal-content .lead {
@@ -731,13 +736,15 @@ hr.star-dark:after {
   background: #fff;
 }
 
-.highlight-carousel {
+.highlight-carousel,
+.highlight-single {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
 }
 
-.highlight-carousel .item img {
+.highlight-carousel .item img,
+.highlight-single img {
   width: 100%;
   display: block;
   max-height: 650px;
@@ -794,7 +801,8 @@ hr.star-dark:after {
   #hero-top {
     padding-top: 90px;
   }
-  .highlight-carousel .item img {
+  .highlight-carousel .item img,
+  .highlight-single img {
     max-height: 300px;
   }
 }
@@ -883,7 +891,7 @@ hr.star-dark:after {
    ============================================================ */
 
 #life-at-cseg {
-  padding-top: 80px;
+  padding-top: 130px;
   padding-bottom: 60px;
 }
 
@@ -894,6 +902,7 @@ hr.star-dark:after {
 
 #life-at-cseg .lead {
   color: #333;
+  margin-top: 16px;
 }
 
 .section-heading {
@@ -985,7 +994,7 @@ hr.star-dark:after {
    ============================================================ */
 
 #resources {
-  padding-top: 80px;
+  padding-top: 130px;
   padding-bottom: 60px;
   background: #fff;
 }

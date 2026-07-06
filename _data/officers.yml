@@ -5,61 +5,63 @@
 #   name:        Full name (displayed under photo and in modal)
 #   role:        Position title
 #   img:         Filename in img/portfolio/ (e.g. diana.jpg)
+#                Use placeholder.svg if a headshot isn't available yet,
+#                or vacant.svg for an open (re-election) position.
 #   description: Optional bio shown in the modal popup (leave blank for none)
 
-- name: Diana Gomez
-  role: PhD Student President
-  img: diana.jpg
+- name: Danni Hu
+  role: President
+  img: danni.png
   description:
 
 - name: Namita Shah
-  role: Master Student President
+  role: MS President
   img: namita.png
   description:
 
-- name: Alexander Knapen
-  role: Secretary
-  img: alexander.jpg
+- name: Serra Dane
+  role: University Relations Chair
+  img: serra.png
   description:
 
-- name: Rayhan Rashed
+- name: Open for Re-election
+  role: Graduate External Relations Liaison
+  img: vacant.svg
+  description:
+
+- name: Rayhan Rashad
   role: Treasurer
   img: rayrash.jpg
   description:
 
-- name: Meron Zerihun Demissie
+- name: Dhanvi Bharadwaj
+  role: Secretary
+  img: placeholder.svg
+  description:
+
+- name: Kalab Yibeltal Assefa
   role: Service Co-Chair
-  img: meron.jpg
+  img: kalab.jpg
   description:
 
-- name: Serra Dane
+- name: Shreya Nadiger
   role: Service Co-Chair
-  img: serra.png
+  img: placeholder.svg
   description:
 
-- name: Danniell Hu
-  role: PhD Social Chair
-  img: danni.png
-  description:
-
-- name: Vrinda Desai
-  role: MS Social Chair
-  img: vrindad.png
-  description:
-
-- name: Alvaro Vega Hidalgo
+- name: Samanway Sadhu
   role: Community Engagement Chair
-  img: alvaro.jpg
+  img: rick.jpg
   description:
 
-- name: Steven Schaefer
-  role: University Relations Chair
-  img: steven.jpeg
+- name: Open for Re-election
+  role: Social Chairs — PhD · MS · SUGS
+  img: vacant.svg
   description:
 
-- name: Austin Nguyen
+- name: Jake Sansom
   role: Graduate Student Recruitment Chair
-  img: austin.jpg
+  img: placeholder.svg
   description:
 
 - name: Haotian (Jack) Gong
@@ -67,14 +69,14 @@
   img: haotian.jpg
   description:
 
-- name: Aneesha Sampath
+- name: Jowaria Khan
   role: Admissions Committee Student Representative
-  img: aneesha.jpg
+  img: placeholder.svg
   description:
 
-- name: Jonah Rosenblum
+- name: Alexander Knapen
   role: Faculty Hiring Committee Student Representative
-  img: jonahrosenblum_headshot.png
+  img: alexander.jpg
   description:
 
 - name: Mosharaf Chowdhury

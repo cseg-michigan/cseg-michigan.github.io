@@ -4,9 +4,9 @@
 
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
-    <div class="row">
+    <div class="row" style="margin-bottom: 45px;">
       <div class="col-lg-12 text-center">
-        <h2>2025-2026 Officers</h2>
+        <h2>2026-2027 Officers</h2>
         <hr class="star-primary">
       </div>
     </div>
@@ -52,7 +52,7 @@
           <div class="modal-body">
             <h2>{{ officer.name }}</h2>
             {% if officer.role %}
-            <p class="lead" style="margin-top:-10px;margin-bottom:15px;">{{ officer.role }}</p>
+            <p class="lead officer-modal-role">{{ officer.role }}</p>
             {% endif %}
             <hr class="star-primary">
             <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"

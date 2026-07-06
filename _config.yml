@@ -1,11 +1,11 @@
 # Site settings
 title: CSEG
 email: cseg-officers@umich.edu
+# Note: the CSEG Slack is invite-only for CSE grad students. Do NOT put the open
+# join.slack.com invite link here — this repo is public. People request an invite by email.
 url: "https://cseg-michigan.github.io/"
 baseurl: ""
-description: "CSEG is a student-run organization that represents CSE graduate students at the University of Michigan. We serve as a voice for graduate students on departmental
-          committees and work to build a strong, inclusive community through social events, networking opportunities, and
-          professional development activities. All CSE graduate students are automatically members of CSEG."
+description: "CSEG is a student-run organization that represents CSE graduate students at the University of Michigan. We serve as a voice for graduate students and work to build a strong, inclusive community through social events, networking opportunities, and professional development. All CSE graduate students are automatically members of CSEG."
 keywords: "Computer, Science, Engineering, Graduate, Students, UMich, University, Michigan"
 skills: "Computer Science & Engineering Graduate Students @ UMich"
 meta_author: Hu Danniell
@@ -67,11 +67,6 @@ defaults:
     values:
       permalink: ""
 
-collections:
-  portfolio:
-    output: true
-    permalink: /portfolio/:name/
-  initiatives:
-    output: true        # gives each initiative its own page (optional)
-    permalink: /initiatives/:name/
+# Officers are defined in _data/officers.yml and initiatives in _data/initiatives.yml.
+# (The old portfolio/initiatives Jekyll collections were removed — they were unused.)
 
