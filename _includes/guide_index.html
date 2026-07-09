@@ -1,92 +1,43 @@
-<!-- Resources page -->
-<!-- CSEG-written guides are markdown files in _guides/ (one per topic). -->
-<!-- Resource links live in _data/resources.yml. -->
-
-{% assign categories = "Before You Arrive,Getting Settled,Academics & Research,Funding & Jobs,Life in Ann Arbor" | split: "," %}
+<!-- Resources page: official university and department links, curated by CSEG. -->
+<!-- Links live in _data/resources.yml. -->
 
 <section id="guide" class="page-top-pad" style="padding-bottom: 76px;">
   <div class="container">
 
-    <!-- Header -->
     <div class="section-head">
-      <span class="section-eyebrow">For CSE Grad Students</span>
       <h2>Resources</h2>
-      <p class="guide-lead">
-        Guides and links for Master's, SUGS, and PhD students: finding housing, choosing an
-        advisor, funding, advising, and more.
-      </p>
-      <p class="guide-disclaimer">
-        <i class="fa fa-info-circle"></i>
-        CSEG puts this together for students. It isn't official university guidance, so
-        double-check important details with the department.
-      </p>
     </div>
 
-    <!-- CSEG-written guides, grouped by lifecycle category -->
-    {% for cat in categories %}
-      {% assign guides_in = site.guides | where: "category", cat | sort: "order" %}
-      {% if guides_in.size > 0 %}
-      <div class="guide-category">
-        <h3 class="guide-category-title">{{ cat }}</h3>
-        <div class="row guide-cards-row">
-          {% for guide in guides_in %}
-          <div class="col-md-6">
-            <a class="guide-card" href="{{ guide.url | relative_url }}">
-              <h4 class="guide-card-title">{{ guide.title }}</h4>
-              {% if guide.summary %}<p class="guide-card-summary">{{ guide.summary }}</p>{% endif %}
-              <div class="guide-card-meta">
-                {% if guide.audience %}<span class="guide-tag">{{ guide.audience }}</span>{% endif %}
-                <span class="guide-card-read">Read guide &rarr;</span>
-              </div>
-            </a>
-          </div>
-          {% endfor %}
+    <div class="row resources-grid" id="links">
+      {% for group in site.data.resources %}
+      <div class="col-md-6 resource-group-col">
+        <div class="resource-group">
+          <h3 class="resource-group-title">
+            <i class="fa fa-{{ group.icon }} resource-group-icon"></i>
+            {{ group.category }}
+          </h3>
+          <ul class="resource-list">
+            {% for link in group.links %}
+            <li class="resource-item">
+              <a href="{{ link.url }}" target="_blank" rel="noopener" class="resource-link">
+                {{ link.label }}
+                <i class="fa fa-external-link resource-external-icon"></i>
+              </a>
+              {% if link.note %}<p class="resource-note">{{ link.note }}</p>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
 
-    <!-- Resource links -->
-    <div class="guide-resources" id="links">
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-          <h3 class="guide-section-heading">Useful Links</h3>
-          <p class="guide-connect-lead">
-            Official department resources, funding and fellowships, professional development,
-            and community guides from around the web.
-          </p>
-        </div>
-      </div>
-      <div class="row resources-grid">
-        {% for group in site.data.resources %}
-        <div class="col-md-6 resource-group-col">
-          <div class="resource-group">
-            <h3 class="resource-group-title">
-              <i class="fa fa-{{ group.icon }} resource-group-icon"></i>
-              {{ group.category }}
-            </h3>
-            <ul class="resource-list">
-              {% for link in group.links %}
-              <li class="resource-item">
-                <a href="{{ link.url }}" target="_blank" rel="noopener" class="resource-link">
-                  {{ link.label }}
-                  <i class="fa fa-external-link resource-external-icon"></i>
-                </a>
-                {% if link.note %}<p class="resource-note">{{ link.note }}</p>{% endif %}
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p class="guide-connect-optin">
-            Know a link that belongs here?
-            <a href="mailto:{{ site.email }}?subject=Resource%20suggestion">Send it our way.</a>
-          </p>
-        </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <p class="guide-connect-optin">
+          Know a link that belongs here?
+          <a href="mailto:{{ site.email }}?subject=Resource%20suggestion">Send it our way.</a>
+        </p>
       </div>
     </div>
 

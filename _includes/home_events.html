@@ -1,6 +1,4 @@
-<!-- Home: community highlight + recent events. -->
-<!-- The featured photo is the first entry in _data/highlights.yml. -->
-<!-- Event cards pull from _data/past_events.yml (same data as the Life page). -->
+<!-- Home: community highlight. The photo is the first entry in _data/highlights.yml. -->
 
 {% assign highlight = site.data.highlights | first %}
 
@@ -8,14 +6,9 @@
   <div class="container">
 
     <div class="section-head">
-      <span class="section-eyebrow">Out &amp; About</span>
       <h2>Life in CSEG</h2>
-      <p class="section-lead">
-        Cookouts, game nights, ice skating, bowling. This is what we get up to outside the lab.
-      </p>
     </div>
 
-    <!-- Featured community highlight, shown big -->
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="c-card highlight-feature">
@@ -31,23 +24,6 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Recent events -->
-    <div class="row event-teaser-row">
-      {% for event in site.data.past_events limit: 3 %}
-      <div class="col-sm-4">
-        <a class="c-card c-card--hover event-teaser-card" href="{{ '/life-at-cseg/' | relative_url }}">
-          <div class="event-teaser-photo">
-            <img src="{{ '/' | append: event.photos.first | relative_url }}" alt="{{ event.title }}">
-          </div>
-          <div class="event-teaser-body">
-            <h3>{{ event.title }}</h3>
-            <p class="event-teaser-date">{{ event.date }}</p>
-          </div>
-        </a>
-      </div>
-      {% endfor %}
     </div>
 
     <div class="section-more">

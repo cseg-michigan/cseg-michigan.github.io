@@ -66,20 +66,7 @@ defaults:
       type: "posts"
     values:
       permalink: ""
-  # Every guide in _guides/ uses the guide_article layout by default,
-  # so contributors only need a title/category in front matter.
-  - scope:
-      path: ""
-      type: "guides"
-    values:
-      layout: guide_article
 
-# Officers are defined in _data/officers.yml and initiatives in _data/initiatives.yml.
-# (The old portfolio/initiatives Jekyll collections were removed — they were unused.)
-
-# Resources guides: articles maintained by CSEG, one markdown file per topic in _guides/.
-collections:
-  guides:
-    output: true
-    permalink: /guide/:name/
+# Officers are defined in _data/officers.yml, initiatives in _data/initiatives.yml,
+# and resource links in _data/resources.yml.
 
