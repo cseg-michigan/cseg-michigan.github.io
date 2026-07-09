@@ -2,36 +2,31 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{% if page.title and page.title != site.title %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }} &mdash; Computer Science &amp; Engineering Graduate Students @ UMich{% endif %}</title>
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ site.description }}">
   <meta name="keywords" content="{{ site.keywords }}" />
-  {% if site.meta_author %}
-  <meta name="author" content="{{ site.meta_author }}">{% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/img/favicon.svg' | relative_url }}">
+
+  <!-- Social sharing / Open Graph -->
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{% if page.title and page.title != site.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — CSE Graduate Students @ UMich{% endif %}">
+  <meta property="og:description" content="{{ page.summary | default: site.description | strip_newlines | truncate: 200 }}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta property="og:image" content="{{ '/img/highlights/t_shirt.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/font-awesome/css/all.min.css' | relative_url }}">
 
-  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-  <!-- <link rel="stylesheet" href="{{ " style.css" }}"> -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Google verification -->
   {% if site.google_verify %}
   <meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
-
-  <!-- Bing Verification -->
   {% if site.bing_verify %}
   <meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
-
-  <!-- Custom Fonts -->
-  <!-- <link rel="stylesheet" href="{{ " css/font-awesome/css/all.min.css" }}"> -->
-  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>

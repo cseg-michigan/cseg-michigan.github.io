@@ -1,0 +1,42 @@
+<!-- Home: entry point to the Grad Guide + connect directory -->
+
+<section id="home-guide" class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-eyebrow">By Students, For Students</span>
+      <h2>The Grad Guide</h2>
+      <p class="section-lead">
+        Hard-won advice from students who've been through it &mdash; housing, advisors, funding,
+        and settling into Ann Arbor &mdash; plus curated resources and current students you can talk to.
+      </p>
+    </div>
+
+    <div class="row guide-cards-row">
+      {% assign featured = site.guides | sort: "order" %}
+      {% for guide in featured limit: 2 %}
+      <div class="col-sm-4">
+        <a class="guide-card" href="{{ guide.url | relative_url }}">
+          {% if guide.audience %}<span class="guide-tag">{{ guide.audience }}</span>{% endif %}
+          <h3 class="guide-card-title" style="margin-top: 10px;">{{ guide.title }}</h3>
+          {% if guide.summary %}<p class="guide-card-summary">{{ guide.summary | truncate: 110 }}</p>{% endif %}
+          <span class="guide-card-read">Read guide &rarr;</span>
+        </a>
+      </div>
+      {% endfor %}
+      <div class="col-sm-4">
+        <a class="guide-card" href="{{ '/guide/' | relative_url }}#guide-connect">
+          <span class="guide-tag">Incoming students</span>
+          <h3 class="guide-card-title" style="margin-top: 10px;">Talk to a current student</h3>
+          <p class="guide-card-summary">Get matched with someone who's been through what you're about to go through.</p>
+          <span class="guide-card-read">Find your person &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-more">
+      <a class="btn-cseg-ghost" href="{{ '/guide/' | relative_url }}">Browse the full guide &amp; resources</a>
+    </div>
+
+  </div>
+</section>

@@ -1,19 +1,15 @@
 <section id="social-events">
   <div class="container">
 
-    <!-- Header -->
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Calendar</h2>
-        <hr class="star-primary">
-        <p class="lead" style="margin-top:16px;">
-          Stay up to date with CSEG's upcoming events. Join us for cookouts, game nights, and more!
-        </p>
-      </div>
+    <div class="section-head">
+      <span class="section-eyebrow">What's Coming Up</span>
+      <h2>Calendar</h2>
+      <p class="section-lead">
+        Stay up to date with CSEG's upcoming events. Join us for cookouts, game nights, and more!
+      </p>
     </div>
 
-    <!-- Calendar Embed -->
-    <div class="row" style="margin-top: 30px;">
+    <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
         <div class="calendar-card">
           <iframe
@@ -27,12 +23,10 @@
       </div>
     </div>
 
-    <!-- Optional Footer Text -->
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
         <p style="margin-top: 16px;">
-          Want to get involved or request an event? 
-          
+          Want to get involved or request an event?
           Contact us at
           <a href="mailto:cseg-officers@umich.edu">cseg-officers@umich.edu</a>.
         </p>
@@ -41,39 +35,3 @@
 
   </div>
 </section>
-
-<style>
-  #social-events {
-    padding-top: 130px; /* space below navbar */
-    padding-bottom: 60px;
-  }
-
-  .calendar-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.07);
-    padding: 12px;
-  }
-
-  .cseg-calendar {
-    width: 100%;
-    min-height: 750px;
-    border: 0;
-  }
-
-  #social-events h2 {
-    color: #{{ site.secondary | default: '00274C' }}; /* navy blue header */
-    font-weight: 700;
-  }
-
-  #social-events .lead {
-    color: #333;
-  }
-
-  /* Optional: center the calendar better on mobile */
-  @media (max-width: 768px) {
-    .cseg-calendar {
-      min-height: 600px;
-    }
-  }
-</style>

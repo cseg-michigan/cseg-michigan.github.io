@@ -4,19 +4,12 @@
   <body id="page-top" class="index">
     {% include nav.html %}
 
-    <main role="main" id="contact-page">
-      {% include contact.html %}   <!-- pulls in the actual contact section -->
-      {{ content }}                <!-- optional: page-specific extras -->
+    <main role="main">
+      {% include contact.html %}
+      {{ content }}
     </main>
 
     {% include footer.html %}
     {% include js.html %}
-
-    <style>
-      #contact-page {
-        /* top offset handled by #contact section (130px) to match other pages */
-        padding-bottom: 60px;
-      }
-    </style>
   </body>
 </html>

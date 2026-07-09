@@ -1,0 +1,36 @@
+<!-- Home: officer preview strip — first few officers with real photos, linking to the full team page. -->
+
+<section id="home-officers" class="section section--alt">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-eyebrow">Your Representatives</span>
+      <h2>Meet the Team</h2>
+      <p class="section-lead">
+        Fifteen students (and one faculty advisor) advocating for grads in department decisions
+        and keeping the community running.
+      </p>
+    </div>
+
+    <div class="officer-strip">
+      {% assign shown = 0 %}
+      {% for officer in site.data.officers %}
+        {% unless officer.img contains "placeholder" or officer.img contains "vacant" %}
+          {% if shown < 6 %}
+          <div class="officer-strip-item">
+            <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}" alt="{{ officer.name }}">
+            <p class="name">{{ officer.name }}</p>
+            <p class="role">{{ officer.role }}</p>
+          </div>
+          {% assign shown = shown | plus: 1 %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+
+    <div class="section-more">
+      <a class="btn-cseg-ghost" href="{{ '/officers/' | relative_url }}">Meet the whole team</a>
+    </div>
+
+  </div>
+</section>

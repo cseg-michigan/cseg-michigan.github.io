@@ -1,28 +1,27 @@
 <!-- Grad Student Guide — landing page -->
 <!-- Guides are markdown files in _guides/ (one per topic). -->
 <!-- The "connect with a student" list lives in _data/guide_mentors.yml. -->
+<!-- Resource links live in _data/resources.yml. -->
 
 {% assign categories = "Before You Arrive,Getting Settled,Academics & Research,Funding & Jobs,Life in Ann Arbor" | split: "," %}
 
-<section id="guide">
+<section id="guide" class="page-top-pad" style="padding-bottom: 76px;">
   <div class="container">
 
     <!-- Header -->
-    <div class="row">
-      <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h2>Grad Student Guide</h2>
-        <hr class="star-primary">
-        <p class="guide-lead">
-          Practical, hard-won advice for CSE grad students &mdash; written by students who have been
-          through it. From landing in Ann Arbor to finding housing, choosing an advisor, and settling in,
-          plus <a href="#resources">curated resources and links</a> to point you the right way.
-        </p>
-        <p class="guide-disclaimer">
-          <i class="fa fa-info-circle"></i>
-          By students, for students. This is community knowledge and does not officially represent
-          CSE or the University of Michigan &mdash; always double-check official policies.
-        </p>
-      </div>
+    <div class="section-head">
+      <span class="section-eyebrow">By Students, For Students</span>
+      <h2>Grad Student Guide</h2>
+      <p class="guide-lead">
+        Practical, hard-won advice for CSE grad students &mdash; written by students who have been
+        through it. From landing in Ann Arbor to finding housing, choosing an advisor, and settling in,
+        plus <a href="#resources">curated resources and links</a> to point you the right way.
+      </p>
+      <p class="guide-disclaimer">
+        <i class="fa fa-info-circle"></i>
+        This is community knowledge and does not officially represent CSE or the University of
+        Michigan &mdash; always double-check official policies.
+      </p>
     </div>
 
     <!-- Guides grouped by lifecycle category -->
@@ -75,7 +74,7 @@
               {% for t in m.topics %}<li>{{ t }}</li>{% endfor %}
             </ul>
             {% endif %}
-            <a class="btn btn-guide" href="mailto:{{ site.email }}?subject=Intro%20request%3A%20{{ m.name | url_encode }}">
+            <a class="btn-cseg-ghost" href="mailto:{{ site.email }}?subject=Intro%20request%3A%20{{ m.name | url_encode }}">
               Request an intro
             </a>
           </div>
@@ -152,11 +151,11 @@
           </p>
           <div class="guide-contribute-actions">
             {% if site.repo %}
-            <a class="btn btn-guide btn-guide-primary" href="{{ site.repo }}/tree/master/_guides" target="_blank" rel="noopener">
+            <a class="btn-cseg" href="{{ site.repo }}/tree/master/_guides" target="_blank" rel="noopener">
               <i class="fa-brands fa-github"></i>&nbsp; Contribute on GitHub
             </a>
             {% endif %}
-            <a class="btn btn-guide" href="mailto:{{ site.email }}?subject=Grad%20Guide%20contribution">
+            <a class="btn-cseg-ghost" href="mailto:{{ site.email }}?subject=Grad%20Guide%20contribution">
               <i class="fa fa-envelope"></i>&nbsp; Email us your tips
             </a>
           </div>
@@ -166,110 +165,3 @@
 
   </div>
 </section>
-
-<style>
-  #guide {
-    padding-top: 130px;   /* space below navbar — consistent with other pages */
-    padding-bottom: 60px;
-  }
-  #guide h2 { color: #00274C; font-weight: 700; }
-
-  .guide-lead {
-    color: #444;
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 720px;
-    margin: 16px auto 0;
-  }
-  .guide-disclaimer {
-    color: #666;
-    font-size: 14px;
-    background: #f1f5f9;
-    border-radius: 8px;
-    padding: 10px 16px;
-    max-width: 720px;
-    margin: 20px auto 0;
-  }
-  .guide-disclaimer .fa { color: #00274C; margin-right: 6px; }
-
-  /* Category blocks */
-  .guide-category { margin-top: 46px; }
-  .guide-category-title {
-    color: #00274C;
-    font-weight: 700;
-    font-size: 22px;
-    padding-bottom: 8px;
-    border-bottom: 3px solid #FFCB05;
-    margin-bottom: 22px;
-  }
-  .guide-cards-row { display: flex; flex-wrap: wrap; }
-  .guide-cards-row > [class*="col-"] { display: flex; margin-bottom: 22px; }
-
-  .guide-card {
-    display: block;
-    width: 100%;
-    background: #fff;
-    border: 1px solid #e6e9ee;
-    border-radius: 10px;
-    padding: 22px 22px 18px;
-    box-shadow: 0 3px 14px rgba(0,0,0,0.05);
-    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-    text-decoration: none;
-  }
-  .guide-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 26px rgba(0,0,0,0.10);
-    border-color: #FFCB05;
-    text-decoration: none;
-  }
-  .guide-card-title { color: #00274C; font-weight: 700; font-size: 18px; margin: 0 0 8px; }
-  .guide-card-summary { color: #555; font-size: 15px; line-height: 1.55; margin: 0 0 14px; }
-  .guide-card-meta { display: flex; align-items: center; justify-content: space-between; }
-  .guide-tag {
-    display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 0.04em; color: #00274C; background: #FFCB05; border-radius: 999px; padding: 3px 10px;
-  }
-  .guide-card-read { color: #00274C; font-weight: 600; font-size: 14px; }
-
-  /* Shared section headings */
-  .guide-section-heading { color: #00274C; font-weight: 700; font-size: 24px; margin-bottom: 10px; }
-
-  /* Connect + resources sections */
-  .guide-connect,
-  .guide-resources { margin-top: 60px; padding-top: 46px; border-top: 1px solid #e6e9ee; }
-  .guide-resources .resources-grid { margin-top: 10px; }
-  .guide-connect-lead, .guide-contribute-lead {
-    color: #555; font-size: 16px; line-height: 1.6; max-width: 720px; margin: 0 auto 26px;
-  }
-  .guide-mentors-row { display: flex; flex-wrap: wrap; justify-content: center; }
-  .guide-mentors-row > [class*="col-"] { display: flex; margin-bottom: 22px; }
-  .guide-mentor-card {
-    width: 100%; background: #fff; border-radius: 10px; border-top: 4px solid #00274C;
-    box-shadow: 0 3px 14px rgba(0,0,0,0.06); padding: 22px 20px; text-align: left;
-    display: flex; flex-direction: column;
-  }
-  .guide-mentor-name { color: #00274C; font-weight: 700; font-size: 18px; margin: 0 0 2px; }
-  .guide-mentor-program { color: #777; font-size: 13px; margin: 0 0 8px; }
-  .guide-mentor-background { color: #444; font-size: 14px; margin: 0 0 10px; }
-  .guide-mentor-topics { list-style: none; padding: 0; margin: 0 0 16px; flex-grow: 1; }
-  .guide-mentor-topics li {
-    font-size: 13px; color: #333; background: #f1f5f9; border-radius: 6px;
-    padding: 4px 10px; margin-bottom: 6px; display: inline-block; margin-right: 6px;
-  }
-  .guide-connect-optin { color: #555; font-size: 15px; margin-top: 8px; }
-  .guide-connect-optin a { font-weight: 600; }
-  .guide-empty { color: #777; font-style: italic; }
-
-  /* Contribute section */
-  .guide-contribute { margin-top: 60px; padding: 46px 20px; background: #f8f9fa; border-radius: 12px; text-align: center; }
-  .guide-contribute-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-
-  .btn-guide {
-    font-weight: 600; border-radius: 8px; padding: 10px 20px;
-    background: #fff; color: #00274C; border: 2px solid #00274C;
-    transition: all .15s ease;
-  }
-  .btn-guide:hover, .btn-guide:focus { background: #00274C; color: #fff; }
-  .btn-guide-primary { background: #00274C; color: #fff; }
-  .btn-guide-primary:hover, .btn-guide-primary:focus { background: #FFCB05; color: #00274C; border-color: #FFCB05; }
-</style>

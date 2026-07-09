@@ -11,7 +11,7 @@
 
             <a class="guide-back" href="{{ '/guide/' | relative_url }}">&larr; All guides</a>
 
-            {% if page.category %}<span class="guide-article-category">{{ page.category }}</span>{% endif %}
+            {% if page.category %}<div><span class="guide-article-category">{{ page.category }}</span></div>{% endif %}
             <h1 class="guide-article-title">{{ page.title }}</h1>
 
             <p class="guide-article-meta">
@@ -52,34 +52,5 @@
 
     {% include footer.html %}
     {% include js.html %}
-
-    <style>
-      #guide-article { padding-top: 130px; padding-bottom: 60px; }
-      .guide-back { display: inline-block; color: #00274C; font-weight: 600; margin-bottom: 18px; }
-      .guide-article-category {
-        display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase;
-        letter-spacing: 0.05em; color: #00274C; background: #FFCB05; border-radius: 999px;
-        padding: 3px 12px; margin-bottom: 12px;
-      }
-      .guide-article-title { color: #00274C; font-weight: 700; margin: 6px 0 8px; }
-      .guide-article-meta { color: #888; font-size: 14px; margin-bottom: 6px; }
-      .guide-article-body { color: #222; font-size: 17px; line-height: 1.7; }
-      .guide-article-body h2 { color: #00274C; font-weight: 700; font-size: 24px; margin: 34px 0 12px; }
-      .guide-article-body h3 { color: #00274C; font-weight: 700; font-size: 19px; margin: 26px 0 10px; }
-      .guide-article-body ul, .guide-article-body ol { padding-left: 22px; }
-      .guide-article-body li { margin-bottom: 8px; }
-      .guide-article-body a { color: #00539B; text-decoration: underline; }
-      .guide-article-body blockquote {
-        border-left: 4px solid #FFCB05; background: #f8f9fa; margin: 20px 0;
-        padding: 12px 18px; color: #444; font-size: 16px;
-      }
-      .guide-article-footer {
-        margin-top: 40px; padding-top: 22px; border-top: 1px solid #e6e9ee;
-        color: #555; font-size: 15px;
-      }
-      .guide-article-footer a { color: #00539B; font-weight: 600; }
-      .guide-article-disclaimer { color: #888; font-size: 13px; margin-top: 10px; }
-      .guide-article-disclaimer .fa { color: #00274C; margin-right: 5px; }
-    </style>
   </body>
 </html>
