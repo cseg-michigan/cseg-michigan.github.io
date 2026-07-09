@@ -1,0 +1,29 @@
+# Current students who have volunteered to answer questions from incoming students.
+#
+# PRIVACY: Do not list anyone without their consent, and do not put personal emails
+# here. Intros are brokered through the officers (the "Request an intro" button emails
+# cseg-officers@umich.edu). Volunteers pick which topics they're happy to be asked about.
+#
+# To add a volunteer, copy a block and fill it in:
+#   name:       First name (or first + last initial) — how they want to be shown
+#   program:    e.g. "PhD, 3rd year" or "MS, 1st year"
+#   background: One short line (optional), e.g. "International student from India"
+#   topics:     List of things they're happy to help with
+#
+# The two entries below are EXAMPLES — replace them with real volunteers.
+
+- name: "Example volunteer (replace me)"
+  program: "PhD, 3rd year"
+  background: "International student, moved from India"
+  topics:
+    - International housing
+    - F-1 visa & SSN
+    - First month in Ann Arbor
+
+- name: "Example volunteer (replace me)"
+  program: "MS, 2nd year"
+  background: "Came in straight from undergrad in the US"
+  topics:
+    - Finding an apartment
+    - Choosing courses
+    - Internship search

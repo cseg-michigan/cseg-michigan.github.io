@@ -9,6 +9,16 @@
 #       url:   Full URL
 #       note:  Optional short description shown under the label
 
+- category: Guides from the CS Community
+  icon: compass
+  links:
+    - label: Grad School Application Guide
+      url: https://csguides.github.io/grad-school-application-guide/
+      note: A community-written guide to applying to CS PhD and MS programs.
+    - label: CS Grad Job Guide
+      url: https://csguides.github.io/grad-job-guide/
+      note: Navigating the CS job and internship search as a grad student.
+
 - category: New Students
   icon: star
   links:
