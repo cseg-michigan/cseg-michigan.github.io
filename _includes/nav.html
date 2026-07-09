@@ -21,7 +21,7 @@
         <!-- Separate pages -->
         <li{% if page.url contains '/officers' %} class="active"{% endif %}><a href="{{ '/officers/' | relative_url }}">Officers</a></li>
         <li{% if page.url contains '/life-at-cseg' %} class="active"{% endif %}><a href="{{ '/life-at-cseg/' | relative_url }}">Life in CSEG</a></li>
-        <li{% if page.url contains '/guide' %} class="active"{% endif %}><a href="{{ '/guide/' | relative_url }}">Guide</a></li>
+        <li{% if page.url contains '/resources' or page.url contains '/guide' %} class="active"{% endif %}><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
         <li{% if page.url contains '/calendar' %} class="active"{% endif %}><a href="{{ '/calendar/' | relative_url }}">Calendar</a></li>
         <li{% if page.url contains '/contact' %} class="active"{% endif %}><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
       </ul>

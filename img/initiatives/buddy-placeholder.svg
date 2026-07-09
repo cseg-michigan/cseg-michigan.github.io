@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Buddy Program">
+  <rect width="800" height="600" fill="#eef1f5"/>
+  <!-- two friendly figures -->
+  <g fill="#00274C">
+    <circle cx="310" cy="240" r="62"/>
+    <path d="M310 320c-66 0-120 44-120 98v62h240v-62c0-54-54-98-120-98z"/>
+  </g>
+  <g fill="#FFCB05" stroke="#00274C" stroke-width="6">
+    <circle cx="480" cy="255" r="52"/>
+    <path d="M480 322c-56 0-102 37-102 83v75h204v-75c0-46-46-83-102-83z"/>
+  </g>
+  <rect x="0" y="520" width="800" height="80" fill="#00274C"/>
+  <text x="400" y="571" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="800" fill="#FFCB05" letter-spacing="2">BUDDY PROGRAM</text>
+</svg>

@@ -14,6 +14,20 @@
 #   links:
 #     - { label: "Interest Form", url: "https://example.com/mentorship-interest" }
 
+- id: buddy-program
+  title: Buddy Program
+  # TODO replace with a real photo from a buddy event
+  img: buddy-placeholder.svg
+  lead: "Helping New Students Get Settled"
+  description: >
+    The Buddy Program pairs a "New Buddy" (a 1st or 2nd year student who wants help
+    navigating university life) with an "Onboarding Buddy" (a 2nd year or above student
+    who shows them the ropes). It's a great way to make friends and ease the transition
+    into grad school. A points system keeps things fun: attending and volunteering at
+    events earns points toward awards, and Onboarding Buddies get official recognition
+    that's a nice addition to a resume or service statement. Applications open each
+    year, so watch your email for details.
+
 - id: tea-time
   title: Tea Time
   # TODO replace

@@ -311,31 +311,36 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
-.hero-photo-card {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 18px 50px rgba(0, 10, 25, 0.45);
-  background: #fff;
-  transform: rotate(1.2deg);
-}
-.hero-photo-card img { width: 100%; display: block; }
-.hero-photo-caption {
-  background: #fff;
-  padding: 12px 16px;
-}
-.hero-photo-caption .chip { margin-bottom: 6px; }
-.hero-photo-caption p {
-  color: var(--muted);
-  font-size: 13.5px;
-  line-height: 1.5;
-  margin: 0;
-}
+/* centered hero variant */
+.hero--center { text-align: center; }
+.hero--center .hero-sub { margin-left: auto; margin-right: auto; max-width: 640px; }
+.hero--center .hero-actions { justify-content: center; }
 
 @media (max-width: 991px) {
   #hero { padding: 140px 0 64px; }
   .hero-title { font-size: 36px; }
-  .hero-photo-card { margin-top: 40px; transform: none; }
 }
+
+/* ---------------------------------------------------------------- home: featured highlight */
+
+.highlight-feature { overflow: hidden; margin-bottom: 40px; }
+.highlight-feature > img {
+  width: 100%;
+  display: block;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center top;
+}
+.highlight-feature-body { padding: 18px 24px 20px; }
+.highlight-feature-body .chip { margin-bottom: 10px; }
+.highlight-feature-body p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 760px;
+}
+.highlight-feature-credit { font-size: 12.5px; color: var(--faint); margin-top: 6px !important; }
 
 /* ---------------------------------------------------------------- home: events teaser */
 
@@ -422,36 +427,6 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 @media (max-width: 767px) {
   .initiative-row { margin-bottom: 44px; }
   .initiative-content { margin-top: 18px; }
-}
-
-/* ---------------------------------------------------------------- home: officers strip */
-
-.officer-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 26px;
-}
-.officer-strip-item { text-align: center; width: 132px; }
-.officer-strip-item img {
-  width: 108px; height: 108px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: var(--shadow-sm);
-}
-.officer-strip-item .name {
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 14.5px;
-  color: var(--navy);
-  margin: 10px 0 0;
-  line-height: 1.25;
-}
-.officer-strip-item .role {
-  color: var(--faint);
-  font-size: 12.5px;
-  margin: 2px 0 0;
 }
 
 /* ---------------------------------------------------------------- officers page */

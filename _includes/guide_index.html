@@ -1,6 +1,5 @@
-<!-- Grad Student Guide — landing page -->
-<!-- Guides are markdown files in _guides/ (one per topic). -->
-<!-- The "connect with a student" list lives in _data/guide_mentors.yml. -->
+<!-- Resources page -->
+<!-- CSEG-written guides are markdown files in _guides/ (one per topic). -->
 <!-- Resource links live in _data/resources.yml. -->
 
 {% assign categories = "Before You Arrive,Getting Settled,Academics & Research,Funding & Jobs,Life in Ann Arbor" | split: "," %}
@@ -10,21 +9,20 @@
 
     <!-- Header -->
     <div class="section-head">
-      <span class="section-eyebrow">By Students, For Students</span>
-      <h2>Grad Student Guide</h2>
+      <span class="section-eyebrow">For CSE Grad Students</span>
+      <h2>Resources</h2>
       <p class="guide-lead">
-        Practical, hard-won advice for CSE grad students &mdash; written by students who have been
-        through it. From landing in Ann Arbor to finding housing, choosing an advisor, and settling in,
-        plus <a href="#resources">curated resources and links</a> to point you the right way.
+        Guides and links for Master's, SUGS, and PhD students: finding housing, choosing an
+        advisor, funding, advising, and more.
       </p>
       <p class="guide-disclaimer">
         <i class="fa fa-info-circle"></i>
-        This is community knowledge and does not officially represent CSE or the University of
-        Michigan &mdash; always double-check official policies.
+        CSEG puts this together for students. It isn't official university guidance, so
+        double-check important details with the department.
       </p>
     </div>
 
-    <!-- Guides grouped by lifecycle category -->
+    <!-- CSEG-written guides, grouped by lifecycle category -->
     {% for cat in categories %}
       {% assign guides_in = site.guides | where: "category", cat | sort: "order" %}
       {% if guides_in.size > 0 %}
@@ -48,69 +46,14 @@
       {% endif %}
     {% endfor %}
 
-    <!-- Connect with a current student -->
-    <div class="guide-connect" id="guide-connect">
+    <!-- Resource links -->
+    <div class="guide-resources" id="links">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
-          <h3 class="guide-section-heading">Connect with a Current Student</h3>
+          <h3 class="guide-section-heading">Useful Links</h3>
           <p class="guide-connect-lead">
-            Current students have volunteered to answer questions from incoming students who are going
-            through the same things. Find someone below and request an intro &mdash; an officer will connect you.
-          </p>
-        </div>
-      </div>
-
-      {% assign mentors = site.data.guide_mentors %}
-      {% if mentors and mentors.size > 0 %}
-      <div class="row guide-mentors-row">
-        {% for m in mentors %}
-        <div class="col-md-4 col-sm-6">
-          <div class="guide-mentor-card">
-            <h4 class="guide-mentor-name">{{ m.name }}</h4>
-            {% if m.program %}<p class="guide-mentor-program">{{ m.program }}</p>{% endif %}
-            {% if m.background %}<p class="guide-mentor-background">{{ m.background }}</p>{% endif %}
-            {% if m.topics %}
-            <ul class="guide-mentor-topics">
-              {% for t in m.topics %}<li>{{ t }}</li>{% endfor %}
-            </ul>
-            {% endif %}
-            <a class="btn-cseg-ghost" href="mailto:{{ site.email }}?subject=Intro%20request%3A%20{{ m.name | url_encode }}">
-              Request an intro
-            </a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      {% else %}
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p class="guide-empty">No volunteers listed yet &mdash; be the first! See below to sign up.</p>
-        </div>
-      </div>
-      {% endif %}
-
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p class="guide-connect-optin">
-            Current student willing to help incoming folks?
-            <a href="mailto:{{ site.email }}?subject=Sign%20me%20up%20as%20a%20guide%20buddy">
-              Volunteer to be listed &rarr;
-            </a>
-            You choose which topics you're happy to be asked about; your contact info stays private
-            and intros go through the officers.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Resources & official links -->
-    <div class="guide-resources" id="resources">
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-          <h3 class="guide-section-heading">Resources &amp; Links</h3>
-          <p class="guide-connect-lead">
-            Curated links for CSE grad students &mdash; official department resources, funding and
-            fellowships, professional development, and community guides from around the web.
+            Official department resources, funding and fellowships, professional development,
+            and community guides from around the web.
           </p>
         </div>
       </div>
@@ -137,28 +80,12 @@
         </div>
         {% endfor %}
       </div>
-    </div>
-
-    <!-- Contribute -->
-    <div class="guide-contribute">
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-          <h3 class="guide-section-heading">Help Grow This Guide</h3>
-          <p class="guide-contribute-lead">
-            Learned something the hard way? Add it so the next student doesn't have to. Every guide is a
-            simple markdown file &mdash; edit one, or write a new one, and open a pull request. Not into
-            GitHub? Just email us your notes and we'll add them.
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <p class="guide-connect-optin">
+            Know a link that belongs here?
+            <a href="mailto:{{ site.email }}?subject=Resource%20suggestion">Send it our way.</a>
           </p>
-          <div class="guide-contribute-actions">
-            {% if site.repo %}
-            <a class="btn-cseg" href="{{ site.repo }}/tree/master/_guides" target="_blank" rel="noopener">
-              <i class="fa-brands fa-github"></i>&nbsp; Contribute on GitHub
-            </a>
-            {% endif %}
-            <a class="btn-cseg-ghost" href="mailto:{{ site.email }}?subject=Grad%20Guide%20contribution">
-              <i class="fa fa-envelope"></i>&nbsp; Email us your tips
-            </a>
-          </div>
         </div>
       </div>
     </div>

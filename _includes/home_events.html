@@ -1,4 +1,8 @@
-<!-- Home: recent events teaser — pulls from _data/past_events.yml (same data as the Life page). -->
+<!-- Home: community highlight + recent events. -->
+<!-- The featured photo is the first entry in _data/highlights.yml. -->
+<!-- Event cards pull from _data/past_events.yml (same data as the Life page). -->
+
+{% assign highlight = site.data.highlights | first %}
 
 <section id="home-events" class="section">
   <div class="container">
@@ -7,10 +11,29 @@
       <span class="section-eyebrow">Out &amp; About</span>
       <h2>Life in CSEG</h2>
       <p class="section-lead">
-        Cookouts, game nights, ice skating, bowling &mdash; the moments that make the department feel like a community.
+        Cookouts, game nights, ice skating, bowling. This is what we get up to outside the lab.
       </p>
     </div>
 
+    <!-- Featured community highlight, shown big -->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="c-card highlight-feature">
+          {% if highlight.url %}
+          <img src="{{ highlight.url }}" alt="{{ highlight.alt }}">
+          {% else %}
+          <img src="{{ '/img/highlights/' | append: highlight.img | relative_url }}" alt="{{ highlight.alt }}">
+          {% endif %}
+          <div class="highlight-feature-body">
+            <span class="chip">Community Highlight &middot; {{ highlight.season }}</span>
+            <p>{{ highlight.caption }}</p>
+            {% if highlight.credit %}<p class="highlight-feature-credit">Photo: {{ highlight.credit }}</p>{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent events -->
     <div class="row event-teaser-row">
       {% for event in site.data.past_events limit: 3 %}
       <div class="col-sm-4">

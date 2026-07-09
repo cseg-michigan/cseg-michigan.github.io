@@ -3,33 +3,30 @@ title: Choosing a PhD Advisor
 category: Academics & Research
 order: 1
 audience: PhD students
-summary: Your advisor shapes your entire PhD. How students go about finding the right fit — what to look for, who to talk to, and questions to ask.
-contributors:
-  - CSEG
+summary: Your advisor shapes your entire PhD. What to look for, who to talk to, and questions to ask before you commit.
 updated: July 2026
 ---
 
-Picking an advisor is one of the most consequential decisions of your PhD — it affects your
+Picking an advisor is one of the most consequential decisions of your PhD. It affects your
 research, your funding, and your day-to-day happiness for years. There's no single right way
-to do it, but here's how students approach it. This is a living document;
-[add your own advice](#add-your-experience) at the end.
+to do it, but here's how students approach it.
 
 ## It's about fit, not just fame
 
 A famous advisor isn't automatically the right one *for you*. Things that matter just as much:
 
-- **Advising style** — hands-on and frequent meetings, or hands-off and independent? Which do
+- **Advising style**: hands-on and frequent meetings, or hands-off and independent? Which do
   *you* need right now?
-- **Group culture** — collaborative or competitive? Work hours and expectations?
-- **Funding stability** — does the group have steady funding for your research area?
-- **Track record with students** — do their students graduate, and where do they end up?
+- **Group culture**: collaborative or competitive? Work hours and expectations?
+- **Funding stability**: does the group have steady funding for your research area?
+- **Track record with students**: do their students graduate, and where do they end up?
 
 ## Do your homework
 
 - **Read their recent papers** to see if the research genuinely excites you.
-- **Talk to their current students** — this is the single most useful thing you can do. Ask
+- **Talk to their current students.** This is the single most useful thing you can do. Ask
   candidly about advising style, expectations, and what they'd change.
-- **Talk to their *former* students** if you can — they can speak more freely.
+- **Talk to their *former* students** if you can; they can speak more freely.
 - **Meet more than one potential advisor.** Rotations, reading groups, and courses are natural
   ways to get to know a group before committing.
 
@@ -42,14 +39,9 @@ A famous advisor isn't automatically the right one *for you*. Things that matter
 
 ## Use the official resources too
 
-The department's [Graduate Advising]({{ '/guide/' | relative_url }}#resources) resources cover the
-formal side — degree milestones, requirements, and who your assigned academic advisor is
+The department's [Graduate Advising links]({{ '/resources/' | relative_url }}#links) cover the
+formal side: degree milestones, requirements, and who your assigned academic advisor is
 (distinct from your research advisor). Don't skip the paperwork side while you focus on fit.
 
-<h2 id="add-your-experience">Add your experience</h2>
-
-How did you choose your advisor? What do you wish you'd asked? Add a note for the students
-coming after you.
-
-> *Your advice here.* [Edit this guide]({{ site.repo }}) or email
-> [{{ site.email }}](mailto:{{ site.email }}?subject=Advisor%20guide%20tip).
+Have advice that belongs here? Email
+[{{ site.email }}](mailto:{{ site.email }}?subject=Advisor%20guide) and we'll update the page.

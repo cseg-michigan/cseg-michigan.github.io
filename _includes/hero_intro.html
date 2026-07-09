@@ -1,19 +1,15 @@
-<!-- Home hero: identity statement + community photo -->
-<!-- The photo comes from the first entry in _data/highlights.yml. -->
+<!-- Home hero -->
 
-{% assign highlight = site.data.highlights | first %}
-
-<section id="hero">
+<section id="hero" class="hero--center">
   <div class="container">
     <div class="row">
-
-      <div class="col-md-6">
-        <span class="hero-eyebrow">CSE Graduate Students @ Michigan</span>
-        <h1 class="hero-title">The community behind your <span class="accent">grad school years</span>.</h1>
+      <div class="col-md-10 col-md-offset-1">
+        <span class="hero-eyebrow">University of Michigan &middot; CSE</span>
+        <h1 class="hero-title">We're <span class="accent">CSEG</span>.</h1>
         <p class="hero-sub">
-          CSEG is the student-run organization for CSE graduate students at the University of
-          Michigan &mdash; your voice in the department and your people outside the lab.
-          If you're a CSE grad student, you're already a member.
+          The student-run organization for CSE graduate students at Michigan. Whether you're
+          a Master's, SUGS, or PhD student, you're already a member. We host events, share
+          resources, and represent grad students in the department.
         </p>
         <div class="hero-actions">
           <a class="btn-cseg" href="mailto:{{ site.email }}?subject=CSEG%20Slack%20invite%20request">
@@ -22,21 +18,6 @@
           <a class="btn-cseg-light" href="{{ '/calendar/' | relative_url }}">See upcoming events</a>
         </div>
       </div>
-
-      <div class="col-md-5 col-md-offset-1">
-        <div class="hero-photo-card">
-          {% if highlight.url %}
-          <img src="{{ highlight.url }}" alt="{{ highlight.alt }}">
-          {% else %}
-          <img src="{{ '/img/highlights/' | append: highlight.img | relative_url }}" alt="{{ highlight.alt }}">
-          {% endif %}
-          <div class="hero-photo-caption">
-            <span class="chip">{{ highlight.season }}</span>
-            <p>{{ highlight.caption | strip_newlines | truncate: 120 }}</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>

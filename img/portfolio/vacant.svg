@@ -3,5 +3,5 @@
   <circle cx="250" cy="215" r="120" fill="none" stroke="#FFCB05" stroke-width="10" stroke-dasharray="18 16"/>
   <text x="250" y="248" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="120" font-weight="700" fill="#FFCB05">?</text>
   <rect x="0" y="440" width="500" height="60" fill="#FFCB05"/>
-  <text x="250" y="479" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="27" font-weight="700" fill="#00274C" letter-spacing="1">OPEN — RE-ELECTION</text>
+  <text x="250" y="479" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="27" font-weight="700" fill="#00274C" letter-spacing="1">OPEN POSITION</text>
 </svg>
