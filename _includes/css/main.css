@@ -269,9 +269,12 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 /* ---------------------------------------------------------------- hero */
 
 #hero {
-  background: linear-gradient(160deg, var(--navy) 0%, #003a70 100%);
+  background:
+    radial-gradient(700px 340px at 85% 15%, rgba(255, 203, 5, 0.14), transparent 65%),
+    radial-gradient(600px 420px at 8% 90%, rgba(255, 255, 255, 0.07), transparent 60%),
+    linear-gradient(160deg, var(--navy) 0%, #003a70 100%);
   color: #fff;
-  padding: 170px 0 84px;
+  padding: 160px 0 72px;
   position: relative;
   overflow: hidden;
 }
@@ -316,9 +319,69 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 .hero--center .hero-sub { margin-left: auto; margin-right: auto; max-width: 640px; }
 .hero--center .hero-actions { justify-content: center; }
 
+/* photo stage: big community highlight flanked by tilted snapshots */
+.hero-stage {
+  position: relative;
+  max-width: 760px;
+  margin: 52px auto 0;
+}
+
+.hero-main-card {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 10px 0;
+  box-shadow: 0 22px 60px rgba(0, 10, 25, 0.5);
+}
+.hero-main-card > img {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 6px;
+}
+.hero-main-caption { padding: 14px 12px 16px; text-align: left; }
+.hero-main-caption .chip { margin-bottom: 8px; }
+.hero-main-caption p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+.hero-main-credit { font-size: 12px; color: var(--faint); margin-top: 5px !important; }
+
+.hero-snap {
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  padding: 7px 7px 10px;
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(0, 10, 25, 0.45);
+  width: 220px;
+}
+.hero-snap img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+@supports not (aspect-ratio: 4 / 3) {
+  .hero-snap img { height: 155px; }
+}
+.hero-snap--left { left: -150px; top: 48px; transform: rotate(-6deg); }
+.hero-snap--right { right: -150px; top: 110px; transform: rotate(5deg); }
+
+@media (max-width: 1120px) {
+  .hero-snap--left { left: -60px; }
+  .hero-snap--right { right: -60px; }
+}
 @media (max-width: 991px) {
-  #hero { padding: 140px 0 64px; }
+  #hero { padding: 140px 0 60px; }
   .hero-title { font-size: 36px; }
+  .hero-snap { display: none; }
 }
 
 /* ---------------------------------------------------------------- home: featured highlight */
