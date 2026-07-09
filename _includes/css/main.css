@@ -74,9 +74,10 @@ hr.star-light { border-top-color: var(--maize); }
 
 .navbar-default,
 .navbar {
-  background: var(--navy);
+  background: #001d3a; /* darker than the hero so the bar reads as its own layer */
   border: 0;
-  box-shadow: 0 2px 14px rgba(0, 20, 40, 0.25);
+  border-bottom: 3px solid var(--maize);
+  box-shadow: 0 4px 18px rgba(0, 10, 25, 0.35);
   text-transform: none;
   font-family: var(--font-head);
 }
@@ -306,11 +307,18 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 }
 .hero-title .accent { color: var(--maize); }
 .hero-sub {
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 18.5px;
-  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  line-height: 1.6;
   max-width: 520px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
+}
+.hero-membership {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15.5px;
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
@@ -322,7 +330,7 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 /* photo stage: big community highlight flanked by tilted snapshots */
 .hero-stage {
   position: relative;
-  max-width: 760px;
+  max-width: 880px;
   margin: 52px auto 0;
 }
 
@@ -336,7 +344,7 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 }
 .hero-main-card > img {
   width: 100%;
-  max-height: 440px;
+  max-height: 520px;
   object-fit: cover;
   object-position: center top;
   display: block;
