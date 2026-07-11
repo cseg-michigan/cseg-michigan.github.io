@@ -38,32 +38,24 @@
 <!-- Officer Modals -->
 {% for officer in site.data.officers %}
 {% assign officer_id = forloop.index %}
-<div class="portfolio-modal modal fade" id="officerModal-{{ officer_id }}" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr"><div class="rl"></div></div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>{{ officer.name }}</h2>
-            {% if officer.role %}
-            <p class="lead officer-modal-role">{{ officer.role }}</p>
-            {% endif %}
-            <hr class="star-primary">
-            <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
-                 class="img-responsive img-centered" alt="{{ officer.name }}">
-            {% if officer.description and officer.description != "" %}
-            <div class="officer-modal-bio">{{ officer.description | markdownify }}</div>
-            {% else %}
-            <p class="officer-modal-bio-empty">Bio coming soon.</p>
-            {% endif %}
-            <button type="button" class="btn-cseg-ghost" data-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
+<div class="modal fade officer-modal" id="officerModal-{{ officer_id }}" tabindex="-1" role="dialog" aria-labelledby="officerModalLabel-{{ officer_id }}" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="officer-modal-close" data-dismiss="modal" aria-label="Close">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-body">
+        <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
+             class="officer-modal-photo" alt="{{ officer.name }}">
+        <h3 id="officerModalLabel-{{ officer_id }}" class="officer-modal-name">{{ officer.name }}</h3>
+        {% if officer.role %}
+        <p class="officer-modal-role">{{ officer.role }}</p>
+        {% endif %}
+        {% if officer.description and officer.description != "" %}
+        <div class="officer-modal-bio">{{ officer.description | markdownify }}</div>
+        {% else %}
+        <p class="officer-modal-bio-empty">Bio coming soon.</p>
+        {% endif %}
       </div>
     </div>
   </div>

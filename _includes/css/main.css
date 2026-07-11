@@ -542,54 +542,71 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 }
 .officer-role { color: var(--muted); font-size: 14px; margin: 0; }
 
-/* officer modal */
-.portfolio-modal .modal-content {
-  border-radius: 0;
-  background-clip: border-box;
-  box-shadow: none;
+/* officer modal: compact centered card */
+.officer-modal .modal-dialog {
+  max-width: 420px;
+  margin: 90px auto 30px;
+}
+.officer-modal .modal-content {
   border: 0;
-  min-height: 100%;
-  padding: 90px 0;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 70px rgba(0, 10, 25, 0.4);
+  overflow: hidden;
+  position: relative;
+}
+.officer-modal .modal-body {
+  padding: 26px 28px 28px;
   text-align: center;
 }
-.portfolio-modal .modal-content h2 { font-size: 2.4em; margin: 0 0 8px; }
-.officer-modal-role { color: var(--muted); }
-.portfolio-modal .modal-content img.img-centered { border-radius: var(--radius); max-width: 340px; }
+.officer-modal-close {
+  position: absolute;
+  top: 12px; right: 12px;
+  z-index: 2;
+  width: 36px; height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 39, 76, 0.55);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.officer-modal-close:hover { background: var(--navy); }
+.officer-modal-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 4px auto 16px;
+  display: block;
+  box-shadow: var(--shadow-sm);
+}
+.officer-modal-name { font-size: 22px; margin: 0 0 2px; }
+.officer-modal-role {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 0 0 6px;
+}
 .officer-modal-bio {
-  max-width: 560px;
-  margin: 22px auto 26px;
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
   color: var(--ink);
-  font-size: 16.5px;
-  line-height: 1.7;
-  text-align: center;
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
 }
+.officer-modal-bio p:last-child { margin-bottom: 0; }
 .officer-modal-bio-empty {
-  margin: 22px auto 26px;
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
   color: var(--faint);
   font-style: italic;
 }
-.portfolio-modal .close-modal {
-  position: absolute;
-  top: 25px; right: 25px;
-  width: 75px; height: 75px;
-  background-color: transparent;
-  cursor: pointer;
+@media (max-width: 480px) {
+  .officer-modal .modal-dialog { margin: 70px 14px 20px; }
 }
-.portfolio-modal .close-modal:hover { opacity: 0.3; }
-.portfolio-modal .close-modal .lr {
-  z-index: 1051;
-  width: 1px; height: 75px;
-  margin-left: 35px;
-  background-color: var(--navy);
-  transform: rotate(45deg);
-}
-.portfolio-modal .close-modal .lr .rl {
-  z-index: 1052;
-  width: 1px; height: 75px;
-  background-color: var(--navy);
-  transform: rotate(90deg);
-}
-.portfolio-modal .modal-backdrop { opacity: 0; display: none; }
 
 /* ---------------------------------------------------------------- life page */
 
