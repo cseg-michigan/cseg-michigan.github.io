@@ -83,7 +83,13 @@
   description:
 
 - name: Open for Re-election
-  role: Social Chairs (1 PhD, 1 Master)
+  role: PhD Social Chair
+  committee: Student Life Committee
+  img: vacant.svg
+  description:
+
+- name: Open for Re-election
+  role: MS Social Chair
   committee: Student Life Committee
   img: vacant.svg
   description:
