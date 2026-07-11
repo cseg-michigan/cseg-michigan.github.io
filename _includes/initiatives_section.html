@@ -23,9 +23,15 @@
           <h3>{{ it.title }}</h3>
           {% if it.description %}{{ it.description | markdownify }}{% endif %}
           {% if it.links %}
+            <div class="initiative-links">
             {% for l in it.links %}
-            <a class="btn-cseg-ghost" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+              {% if l.url contains "://" %}
+              <a class="btn-cseg-ghost" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+              {% else %}
+              <a class="btn-cseg-ghost" href="{{ l.url | relative_url }}">{{ l.label }}</a>
+              {% endif %}
             {% endfor %}
+            </div>
           {% endif %}
         </div>
       </div>

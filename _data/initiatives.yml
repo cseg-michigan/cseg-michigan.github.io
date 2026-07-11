@@ -37,6 +37,9 @@
      CSEG hosts tea time, a (mostly) weekly gathering where graduate students, faculty,
        and staff come together over snacks and drinks. Hosted in the grad lounge,
        it is a casual space to take a break and meet people outside of your lab.
+  links:
+    - label: "See Tea Time on the calendar"
+      url: "/calendar/"
 
 - id: department-representation
   title: Department Representation
@@ -76,3 +79,6 @@
     CSEG organizes a variety of social events such as cookouts, happy hours, intramural
     sports, bike rides, and seasonal activities. These events help students relax, form
     friendships, and build community within CSE.
+  links:
+    - label: "See upcoming events"
+      url: "/calendar/"
