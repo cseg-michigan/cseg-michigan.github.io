@@ -555,6 +555,19 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
 .portfolio-modal .modal-content h2 { font-size: 2.4em; margin: 0 0 8px; }
 .officer-modal-role { color: var(--muted); }
 .portfolio-modal .modal-content img.img-centered { border-radius: var(--radius); max-width: 340px; }
+.officer-modal-bio {
+  max-width: 560px;
+  margin: 22px auto 26px;
+  color: var(--ink);
+  font-size: 16.5px;
+  line-height: 1.7;
+  text-align: center;
+}
+.officer-modal-bio-empty {
+  margin: 22px auto 26px;
+  color: var(--faint);
+  font-style: italic;
+}
 .portfolio-modal .close-modal {
   position: absolute;
   top: 25px; right: 25px;

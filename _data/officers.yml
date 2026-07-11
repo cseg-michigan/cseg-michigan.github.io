@@ -7,9 +7,18 @@
 #   img:         Filename in img/portfolio/ (e.g. diana.jpg)
 #                Use placeholder.svg if a headshot isn't available yet,
 #                or vacant.svg for an open (re-election) position.
-#   description: Optional bio shown in the modal popup (leave blank for none)
+#   description: Short bio shown when someone clicks your photo. Write it yourself!
+#                A few sentences is plenty: research area or program, where you're from,
+#                what you do outside the lab. Markdown works (links, *italics*).
+#                Leave blank and the popup shows "Bio coming soon."
+#
+# Multi-line bio example (the > lets you wrap lines freely):
+#   description: >
+#     Hi, I'm Alex! I'm a 3rd-year PhD student working on distributed systems.
+#     Outside the lab you'll find me at the climbing gym or trying every
+#     coffee shop in Ann Arbor. Ask me about intramural volleyball!
 
-- name: Danni Hu
+- name: Danniell (Danni) Hu
   role: President
   img: danni.png
   description:

@@ -54,11 +54,13 @@
             <hr class="star-primary">
             <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
                  class="img-responsive img-centered" alt="{{ officer.name }}">
-            {% if officer.description %}
-            <p>{{ officer.description }}</p>
+            {% if officer.description and officer.description != "" %}
+            <div class="officer-modal-bio">{{ officer.description | markdownify }}</div>
+            {% else %}
+            <p class="officer-modal-bio-empty">Bio coming soon.</p>
             {% endif %}
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              <i class="fa fa-times"></i> Close
+            <button type="button" class="btn-cseg-ghost" data-dismiss="modal">
+              Close
             </button>
           </div>
         </div>
