@@ -14,9 +14,9 @@
 #
 # Multi-line bio example (the > lets you wrap lines freely):
 #   description: >
-#     Hi, I'm Alex! I'm a 3rd-year PhD student working on distributed systems.
-#     Outside the lab you'll find me at the climbing gym or trying every
-#     coffee shop in Ann Arbor. Ask me about intramural volleyball!
+#     Hi, I'm Danni! I'm a 3rd-year PhD student working on AI for Social Impact.
+#     Outside the lab, you'll find me playing video games, cooking, or enjoying the sunshine with friends outside. 
+
 
 - name: Danniell (Danni) Hu
   role: President

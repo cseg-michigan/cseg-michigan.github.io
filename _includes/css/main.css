@@ -490,123 +490,92 @@ a.c-card { display: block; color: inherit; text-decoration: none; }
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: flex-start; /* an expanded card shouldn't stretch its neighbors */
   gap: 26px;
 }
 .portfolio-flex-item { width: 300px; max-width: 100%; }
 
-#portfolio .portfolio-item { margin: 0 0 10px; }
-#portfolio .portfolio-item .portfolio-link {
+/* expanding officer card */
+details.officer-card > summary {
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+details.officer-card > summary::-webkit-details-marker { display: none; }
+details.officer-card > summary:focus-visible {
+  outline: 3px solid var(--maize);
+  outline-offset: 4px;
+  border-radius: var(--radius);
+}
+
+.officer-photo {
   display: block;
   position: relative;
-  margin: 0 auto;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-#portfolio .portfolio-item .portfolio-link:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+@supports not (aspect-ratio: 1 / 1) {
+  .officer-photo { height: 300px; }
 }
-#portfolio .portfolio-item .portfolio-link img {
+.officer-photo img {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
 }
-#portfolio .portfolio-item .portfolio-link .caption {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background: rgba(0, 39, 76, 0.85);
-  transition: opacity 0.25s ease;
+.officer-card summary:hover .officer-photo {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
-#portfolio .portfolio-item .portfolio-link:hover .caption { opacity: 1; }
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+.officer-photo-hint {
   position: absolute;
-  top: 50%;
-  width: 100%;
-  margin-top: -18px;
-  text-align: center;
+  bottom: 10px; right: 10px;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 39, 76, 0.75);
   color: var(--maize);
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: transform 0.2s ease;
 }
+.officer-card[open] .officer-photo-hint { transform: rotate(180deg); }
 
 .officer-name {
+  display: block;
   font-family: var(--font-head);
   font-size: 17px;
   font-weight: 700;
+  color: var(--navy);
   margin: 14px 0 2px;
 }
-.officer-role { color: var(--muted); font-size: 14px; margin: 0; }
-
-/* officer modal: compact centered card */
-.officer-modal .modal-dialog {
-  max-width: 420px;
-  margin: 90px auto 30px;
-}
-.officer-modal .modal-content {
-  border: 0;
-  border-radius: var(--radius);
-  box-shadow: 0 24px 70px rgba(0, 10, 25, 0.4);
-  overflow: hidden;
-  position: relative;
-}
-.officer-modal .modal-body {
-  padding: 26px 28px 28px;
-  text-align: center;
-}
-.officer-modal-close {
-  position: absolute;
-  top: 12px; right: 12px;
-  z-index: 2;
-  width: 36px; height: 36px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(0, 39, 76, 0.55);
-  color: #fff;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background 0.15s ease;
-}
-.officer-modal-close:hover { background: var(--navy); }
-.officer-modal-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 4px auto 16px;
+.officer-role {
   display: block;
-  box-shadow: var(--shadow-sm);
-}
-.officer-modal-name { font-size: 22px; margin: 0 0 2px; }
-.officer-modal-role {
   color: var(--muted);
-  font-size: 14.5px;
-  margin: 0 0 6px;
+  font-size: 14px;
+  margin: 0;
 }
-.officer-modal-bio {
-  margin: 14px 0 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  color: var(--ink);
-  font-size: 15px;
-  line-height: 1.65;
+
+.officer-bio {
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--maize);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 14px 16px;
   text-align: left;
+  color: var(--ink);
+  font-size: 14.5px;
+  line-height: 1.65;
 }
-.officer-modal-bio p:last-child { margin-bottom: 0; }
-.officer-modal-bio-empty {
-  margin: 14px 0 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  color: var(--faint);
-  font-style: italic;
-}
-@media (max-width: 480px) {
-  .officer-modal .modal-dialog { margin: 70px 14px 20px; }
-}
+.officer-bio p:last-child { margin-bottom: 0; }
+.officer-bio-empty { color: var(--faint); font-style: italic; margin: 0; }
+
 
 /* ---------------------------------------------------------------- life page */
 

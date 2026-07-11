@@ -1,6 +1,6 @@
 <!-- Officers Grid -->
-<!-- Officer data lives in _data/officers.yml — edit that file to add, remove, or update officers. -->
-<!-- Officer photos go in img/portfolio/. -->
+<!-- Officer data lives in _data/officers.yml: edit that file to add, remove, or update officers. -->
+<!-- Officer photos go in img/portfolio/. Clicking a card expands the bio in place. -->
 
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
@@ -10,54 +10,27 @@
 
     <div class="portfolio-flex-row">
       {% for officer in site.data.officers %}
-      {% assign officer_id = forloop.index %}
-      <div class="portfolio-flex-item portfolio-item text-center">
-
-        <a href="#officerModal-{{ officer_id }}" class="portfolio-link" data-toggle="modal" aria-label="{{ officer.name }}">
-          <div class="caption" aria-hidden="true">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
-               class="img-responsive"
-               alt="{{ officer.name }}">
-        </a>
-
-        <h4 class="officer-name">{{ officer.name }}</h4>
-        {% if officer.role %}
-        <p class="officer-role">{{ officer.role }}</p>
-        {% endif %}
-
-      </div>
+      <details class="portfolio-flex-item officer-card">
+        <summary>
+          <span class="officer-photo">
+            <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
+                 alt="{{ officer.name }}">
+            <span class="officer-photo-hint" aria-hidden="true"><i class="fa fa-chevron-down"></i></span>
+          </span>
+          <span class="officer-name">{{ officer.name }}</span>
+          {% if officer.role %}
+          <span class="officer-role">{{ officer.role }}</span>
+          {% endif %}
+        </summary>
+        <div class="officer-bio">
+          {% if officer.description and officer.description != "" %}
+          {{ officer.description | markdownify }}
+          {% else %}
+          <p class="officer-bio-empty">Bio coming soon.</p>
+          {% endif %}
+        </div>
+      </details>
       {% endfor %}
     </div>
   </div>
 </section>
-
-<!-- Officer Modals -->
-{% for officer in site.data.officers %}
-{% assign officer_id = forloop.index %}
-<div class="modal fade officer-modal" id="officerModal-{{ officer_id }}" tabindex="-1" role="dialog" aria-labelledby="officerModalLabel-{{ officer_id }}" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <button type="button" class="officer-modal-close" data-dismiss="modal" aria-label="Close">
-        <i class="fa fa-times"></i>
-      </button>
-      <div class="modal-body">
-        <img src="{{ '/img/portfolio/' | append: officer.img | relative_url }}"
-             class="officer-modal-photo" alt="{{ officer.name }}">
-        <h3 id="officerModalLabel-{{ officer_id }}" class="officer-modal-name">{{ officer.name }}</h3>
-        {% if officer.role %}
-        <p class="officer-modal-role">{{ officer.role }}</p>
-        {% endif %}
-        {% if officer.description and officer.description != "" %}
-        <div class="officer-modal-bio">{{ officer.description | markdownify }}</div>
-        {% else %}
-        <p class="officer-modal-bio-empty">Bio coming soon.</p>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</div>
-{% endfor %}
