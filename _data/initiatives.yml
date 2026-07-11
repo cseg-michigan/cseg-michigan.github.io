@@ -20,13 +20,11 @@
   img: buddy-placeholder.svg
   lead: "Helping New Students Get Settled"
   description: >
-    The Buddy Program pairs a "New Buddy" (a 1st or 2nd year student who wants help
-    navigating university life) with an "Onboarding Buddy" (a 2nd year or above student
-    who shows them the ropes). It's a great way to make friends and ease the transition
-    into grad school. A points system keeps things fun: attending and volunteering at
-    events earns points toward awards, and Onboarding Buddies get official recognition
-    that's a nice addition to a resume or service statement. Applications open each
-    year, so watch your email for details.
+    The Buddy Program pairs each New Buddy (an incoming first- or second-year student)
+    with an Onboarding Buddy (a second-year or more senior graduate student) who can 
+    help them learn the ropes, offer advice, and navigate graduate student life. 
+    It's a great way to build connections and make the transition to graduate school 
+    feel more welcoming and manageable.
 
 - id: tea-time
   title: Tea Time
