@@ -1,94 +1,123 @@
-# Officers for the current academic year.
+# Officers for the current academic year, grouped by committee on the Officers page.
 # To add an officer: copy an entry block, fill in the fields, and add their photo to img/portfolio/.
 # To remove an officer: delete their entry block.
 # Fields:
 #   name:        Full name (displayed under photo and in modal)
 #   role:        Position title
+#   committee:   Which committee group the card appears under. Must exactly match one of:
+#                "Executive and Communications Committee"
+#                "Student Life Committee"
+#                "Recruitment/Admissions/Hiring Committee"
+#                "Faculty Advisor"
+#                (The list of committees and their order is set in _includes/portfolio_grid.html.)
 #   img:         Filename in img/portfolio/ (e.g. diana.jpg)
 #                Use placeholder.svg if a headshot isn't available yet,
 #                or vacant.svg for an open (re-election) position.
-#   description: Short bio shown when someone clicks your photo. Write it yourself!
-#                A few sentences is plenty: research area or program, where you're from,
-#                what you do outside the lab. Markdown works (links, *italics*).
-#                Leave blank and the popup shows "Bio coming soon."
+#   description: Short bio that expands under your card when someone clicks your photo.
+#                Write it yourself! A few sentences is plenty: research area or program,
+#                where you're from, what you do outside the lab. Markdown works
+#                (links, *italics*). Leave blank and the card shows "Bio coming soon."
 #
 # Multi-line bio example (the > lets you wrap lines freely):
 #   description: >
 #     Hi, I'm Danni! I'm a 3rd-year PhD student working on AI for Social Impact.
-#     Outside the lab, you'll find me playing video games, cooking, or enjoying the sunshine with friends outside. 
+#     Outside the lab, you'll find me playing video games, cooking, or enjoying the sunshine with friends outside.
 
+
+# ----- Executive and Communications Committee -----
 
 - name: Danniell (Danni) Hu
   role: President
+  committee: Executive and Communications Committee
   img: danni.png
   description:
 
 - name: Namita Shah
   role: MS President
+  committee: Executive and Communications Committee
   img: namita.png
   description:
 
 - name: Serra Dane
   role: University Relations Chair
+  committee: Executive and Communications Committee
   img: serra.png
   description:
 
 - name: Open for Re-election
   role: Graduate External Relations Liaison
+  committee: Executive and Communications Committee
   img: vacant.svg
   description:
 
 - name: Rayhan Rashad
   role: Treasurer
+  committee: Executive and Communications Committee
   img: rayrash.jpg
   description:
 
 - name: Dhanvi Bharadwaj
   role: Secretary
+  committee: Executive and Communications Committee
   img: placeholder.svg
   description:
 
+# ----- Student Life Committee -----
+
 - name: Kalab Yibeltal Assefa
   role: Service Co-Chair
+  committee: Student Life Committee
   img: kalab.jpg
   description:
 
 - name: Shreya Nadiger
   role: Service Co-Chair
+  committee: Student Life Committee
   img: placeholder.svg
   description:
 
 - name: Samanway Sadhu
   role: Community Engagement Chair
+  committee: Student Life Committee
   img: rick.jpg
   description:
 
 - name: Open for Re-election
-  role: Social Chairs (PhD, MS, and SUGS)
+  role: Social Chairs (1 PhD, 1 Master)
+  committee: Student Life Committee
   img: vacant.svg
   description:
 
+# ----- Recruitment/Admissions/Hiring Committee -----
+
 - name: Jake Sansom
   role: Graduate Student Recruitment Chair
+  committee: Recruitment/Admissions/Hiring Committee
   img: placeholder.svg
   description:
 
 - name: Haotian (Jack) Gong
   role: Admissions and Recruitment Liaison
+  committee: Recruitment/Admissions/Hiring Committee
   img: haotian.jpg
   description:
 
 - name: Jowaria Khan
   role: Admissions Committee Student Representative
+  committee: Recruitment/Admissions/Hiring Committee
   img: placeholder.svg
   description:
 
 - name: Alexander Knapen
-  role: Faculty Hiring Committee Student Representative
+  role: Hiring Committee Student Representative
+  committee: Recruitment/Admissions/Hiring Committee
   img: alexander.jpg
   description:
 
+# ----- Faculty Advisor -----
+
 - name: Mosharaf Chowdhury
   role: Faculty Advisor
+  committee: Faculty Advisor
   img: mc.jpeg
   description:

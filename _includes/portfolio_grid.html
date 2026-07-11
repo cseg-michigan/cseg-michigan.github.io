@@ -1,6 +1,9 @@
 <!-- Officers Grid -->
 <!-- Officer data lives in _data/officers.yml: edit that file to add, remove, or update officers. -->
 <!-- Officer photos go in img/portfolio/. Clicking a card expands the bio in place. -->
+<!-- Committees render in the order listed below; each officer's `committee:` field must match one. -->
+
+{% assign committees = "Executive and Communications Committee;Student Life Committee;Recruitment/Admissions/Hiring Committee;Faculty Advisor" | split: ";" %}
 
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
@@ -8,8 +11,15 @@
       <h2>2026-2027 Officers</h2>
     </div>
 
+    {% for committee in committees %}
+    {% assign members = site.data.officers | where: "committee", committee %}
+    {% if members.size > 0 %}
+    <div class="committee-head">
+      <h3>{{ committee }}</h3>
+    </div>
+
     <div class="portfolio-flex-row">
-      {% for officer in site.data.officers %}
+      {% for officer in members %}
       <details class="portfolio-flex-item officer-card">
         <summary>
           <span class="officer-photo">
@@ -32,5 +42,8 @@
       </details>
       {% endfor %}
     </div>
+    {% endif %}
+    {% endfor %}
+
   </div>
 </section>
