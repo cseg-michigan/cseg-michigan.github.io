@@ -1,6 +1,5 @@
 <!-- Home hero -->
-<!-- The big photo is the first entry in _data/highlights.yml. -->
-<!-- The two side snapshots are the first photo of the first two events in _data/past_events.yml. -->
+<!-- The featured photo is the first entry in _data/highlights.yml. -->
 
 {% assign highlight = site.data.highlights | first %}
 
@@ -20,12 +19,6 @@
     </div>
 
     <div class="hero-stage">
-      {% for event in site.data.past_events limit: 2 %}
-      <div class="hero-snap hero-snap--{% if forloop.first %}left{% else %}right{% endif %}">
-        <img src="{{ '/' | append: event.photos.first | relative_url }}" alt="{{ event.title }}">
-      </div>
-      {% endfor %}
-
       <div class="hero-main-card">
         {% if highlight.url %}
         <img src="{{ highlight.url }}" alt="{{ highlight.alt }}">
