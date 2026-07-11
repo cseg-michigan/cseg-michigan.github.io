@@ -4,12 +4,8 @@
 # Fields:
 #   name:        Full name (displayed under photo and in modal)
 #   role:        Position title
-#   committee:   Which committee group the card appears under. Must exactly match one of:
-#                "Executive and Communications Committee"
-#                "Student Life Committee"
-#                "Recruitment/Admissions/Hiring Committee"
-#                "Faculty Advisor"
-#                (The list of committees and their order is set in _includes/portfolio_grid.html.)
+#   committee:   Which committee the role belongs to. Not shown on the page right now;
+#                kept for reference and to keep this file organized by committee.
 #   img:         Filename in img/portfolio/ (e.g. diana.jpg)
 #                Use placeholder.svg if a headshot isn't available yet,
 #                or vacant.svg for an open (re-election) position.
