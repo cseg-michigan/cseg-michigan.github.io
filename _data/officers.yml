@@ -40,12 +40,6 @@
   img: serra.png
   description:
 
-- name: Open for Re-election
-  role: Graduate External Relations Liaison
-  committee: Executive and Communications Committee
-  img: vacant.svg
-  description:
-
 - name: Rayhan Rashad
   role: Treasurer
   committee: Executive and Communications Committee
@@ -78,16 +72,16 @@
   img: rick.jpg
   description:
 
-- name: Open for Re-election
+- name: Thomas Porter
   role: PhD Social Chair
   committee: Student Life Committee
-  img: vacant.svg
+  img: placeholder.svg
   description:
 
-- name: Open for Re-election
+- name: Sayee Naresh Kumar
   role: MS Social Chair
   committee: Student Life Committee
-  img: vacant.svg
+  img: placeholder.svg
   description:
 
 # ----- Recruitment/Admissions/Hiring Committee -----
