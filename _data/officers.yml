@@ -49,7 +49,7 @@
 - name: Dhanvi Bharadwaj
   role: Secretary
   committee: Executive and Communications Committee
-  img: placeholder.svg
+  img: dhanvi.jpg
   description:
 
 # ----- Student Life Committee -----
@@ -75,7 +75,7 @@
 - name: Thomas Porter
   role: PhD Social Chair
   committee: Student Life Committee
-  img: placeholder.svg
+  img: thomas.jpg
   description:
 
 - name: Sayee Naresh Kumar
@@ -89,7 +89,7 @@
 - name: Jake Sansom
   role: Graduate Student Recruitment Chair
   committee: Recruitment/Admissions/Hiring Committee
-  img: placeholder.svg
+  img: jacob.png
   description:
 
 - name: Haotian (Jack) Gong
