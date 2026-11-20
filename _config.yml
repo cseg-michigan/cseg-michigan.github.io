@@ -1,6 +1,9 @@
 # Site settings
 title: CSEG
 email: cseg-officers@umich.edu
+# Anonymous suggestions Google Form (UMich-only). Paste the forms.gle link here;
+# the "Suggestions" nav item appears only when this is set.
+suggestion_form_url: "https://forms.gle/FU6c7vQiFCn9nSTh9"
 # Note: the CSEG Slack is invite-only for CSE grad students. Do NOT put the open
 # join.slack.com invite link here — this repo is public. People request an invite by email.
 url: "https://cseg-michigan.github.io/"

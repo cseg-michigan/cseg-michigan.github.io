@@ -138,6 +138,32 @@ hr.star-light { border-top-color: var(--maize); }
   }
 }
 
+/* Boxed "Suggestions" nav link */
+.navbar-default .nav li.nav-suggestions a {
+  border: 2px solid var(--maize);
+  border-radius: 6px;
+  color: var(--maize);
+}
+.navbar-default .nav li.nav-suggestions a:hover,
+.navbar-default .nav li.nav-suggestions a:focus {
+  background: var(--maize);
+  color: var(--navy, #00274c);
+}
+@media (min-width: 768px) {
+  .navbar-default .nav li.nav-suggestions a {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 9px;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-default .nav li.nav-suggestions a {
+    display: inline-block;
+    margin: 6px 0 6px 15px;
+  }
+}
+
 .navbar-default .navbar-toggle {
   border-color: rgba(255, 255, 255, 0.4);
 }

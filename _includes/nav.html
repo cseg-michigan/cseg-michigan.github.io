@@ -18,6 +18,10 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden"><a href="#page-top"></a></li>
 
+        {% if site.suggestion_form_url and site.suggestion_form_url != "" %}
+        <li class="nav-suggestions"><a href="{{ site.suggestion_form_url }}" target="_blank" rel="noopener">Suggestions</a></li>
+        {% endif %}
+
         <!-- Separate pages -->
         <li{% if page.url contains '/officers' %} class="active"{% endif %}><a href="{{ '/officers/' | relative_url }}">Officers</a></li>
         <li{% if page.url contains '/life-at-cseg' %} class="active"{% endif %}><a href="{{ '/life-at-cseg/' | relative_url }}">Life in CSEG</a></li>
